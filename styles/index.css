@@ -1,0 +1,33 @@
+.bg-dark {
+    background-color: #080024;
+}
+
+.gradient-1 {
+    background: linear-gradient(96.1deg, rgba(0, 66, 196, 0.9) -62.42%, rgba(183, 0, 187, 0.9) 158.64%);
+}
+
+.gradient-2 {
+    background: linear-gradient(96.1deg, rgba(60, 147, 196, 0.9) -62.42%, rgba(202, 100, 204, 0.9) 158.64%);
+}
+
+.blur {
+    -webkit-filter: blur(20px);
+    -moz-filter: blur(20px);
+    -o-filter: blur(20px);
+    -ms-filter: blur(20px);
+    filter: blur(8px);
+}
+
+.card {
+    width: 400px;
+    background-color: #0D022E;
+}
+
+.link-contact{
+    background: #080024;
+    transition: background 1s ease-out;  
+}
+
+.link-contact:hover{
+    background: linear-gradient(96.1deg, rgba(0, 66, 196, 0.9) -62.42%, rgba(183, 0, 187, 0.9) 158.64%);
+}
