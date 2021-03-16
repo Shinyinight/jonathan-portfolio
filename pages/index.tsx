@@ -151,23 +151,23 @@ export default function Home() {
 				{loaded && <ReactTooltip delayShow={300} effect={'solid'} />}
 				<section
 					id="home"
-					className="flex flex-col-reverse items-center justify-end px-12 bg-no-repeat 2xl:h-screen pt-28 mt-22 2xl:flex-row 2xl:pl-44 main-hero"
+					className="flex flex-col-reverse items-center justify-end px-12 bg-no-repeat xl:h-screen pt-28 mt-22 xl:flex-row xl:pl-44 main-hero"
 				>
-					<div className="2xl:flex-1 2xl:mr-40 left-column">
-						<img src="logo.svg" alt="logo" className="absolute w-16 top-10 left-8 2xl:w-auto 2xl:left-16" />
-						<h1 className="mt-8 text-4xl text-center 2xl:mt-0 2xl:text-left font-alegreya 2xl:text-8xl">
+					<div className="xl:flex-1 xl:mr-40 left-column">
+						<img src="logo.svg" alt="logo" className="absolute w-16 top-10 left-8 xl:w-auto xl:left-16" />
+						<h1 className="mt-8 text-4xl text-center xl:mt-0 xl:text-left font-alegreya xl:text-8xl">
 							Hi, I'm <b>Jonathan</b>
 						</h1>
-						<p className="px-12 mt-6 text-xl leading-snug text-center 2xl:text-left 2xl:px-0 text-1xl 2xl:text-4xl">
+						<p className="px-12 mt-6 text-xl leading-snug text-center xl:text-left xl:px-0 text-1xl xl:text-4xl">
 							I'm an Information Systems Engineer, Full Stack Developer and web enthusiast from Granada,
 							Spain.
 						</p>
-						<div className="flex gap-8 my-14 2xl:my-0 2xl:mt-12 buttons">
+						<div className="flex gap-8 my-14 xl:my-0 xl:mt-12 buttons">
 							<button
 								onClick={() => {
 									scrollTo(projectsRef);
 								}}
-								className="px-10 py-2 text-xl font-bold tracking-wide rounded shadow-xl 2xl:py-3 2xl:text-2xl 2xl:px-14 gradient-1 focus:outline-none focus:ring-4 focus:ring-purple-400 focus:border-transparent"
+								className="px-10 py-2 text-xl font-bold tracking-wide rounded shadow-xl xl:py-3 xl:text-xl xl:px-14 gradient-1 focus:outline-none focus:ring-4 focus:ring-purple-400 focus:border-transparent"
 							>
 								Projects
 							</button>
@@ -175,38 +175,38 @@ export default function Home() {
 								onClick={() => {
 									scrollTo(contactRef);
 								}}
-								className="px-10 py-2 text-xl font-bold tracking-wide rounded shadow-xl 2xl:py-3 2xl:text-2xl 2xl:px-14 gradient-2 focus:outline-none focus:ring-4 focus:ring-purple-400 focus:border-transparent"
+								className="px-10 py-2 text-xl font-bold tracking-wide rounded shadow-xl xl:py-3 xl:text-xl xl:px-14 gradient-2 focus:outline-none focus:ring-4 focus:ring-purple-400 focus:border-transparent"
 							>
 								Contact
 							</button>
 						</div>
 					</div>
-					<div className="2xl:flex-1 right-column">
+					<div className="xl:flex-1 right-column">
 						<img src="hero-image.png" alt="hero-image" />
 					</div>
 				</section>
 				<section
 					id="my-skills"
-					className="flex flex-col items-center py-16 text-center 2xl:py-40 my-skills bg-dark"
+					className="flex flex-col items-center py-16 text-center xl:py-40 my-skills bg-dark"
 				>
-					<h1 className="text-4xl font-bold 2xl:text-5xl font-alegreya">My skills</h1>
-					<p className="px-8 mt-10 text-2xl 2xl:text-3xl">
+					<h1 className="text-4xl font-bold xl:text-5xl font-alegreya">My skills</h1>
+					<p className="px-8 mt-10 text-xl xl:text-3xl">
 						I'm looking to improve my skills and learn new technologies / areas
 					</p>
-					<ScrollContainer vertical={false} className="w-5/6 2xl:w-3/5 scroll-container">
-						<div id="carrousel" className="flex gap-8 p-4 mt-16 2xl:gap-16 carrousel">
+					<ScrollContainer vertical={false} className="w-5/6 xl:w-3/5 scroll-container">
+						<div id="carrousel" className="flex gap-8 p-4 mt-16 xl:gap-16 carrousel">
 							{SKILLS.map((skill) => {
 								return (
 									<div className="relative flex-shrink-0" key={skill.name} data-tip={skill.name}>
 										<img
 											src={skill.image}
 											alt="logo"
-											className="relative z-10 object-cover w-16 2xl:w-24"
+											className="relative z-10 object-cover w-16 xl:w-24"
 										/>
 										<img
 											src={skill.image}
 											alt="logo"
-											className="absolute top-0 z-0 object-cover w-16 2xl:w-24 blur"
+											className="absolute top-0 z-0 object-cover w-16 xl:w-24 blur"
 										/>
 									</div>
 								);
@@ -214,9 +214,9 @@ export default function Home() {
 						</div>
 					</ScrollContainer>
 				</section>
-				<section id="interests" className="py-16 text-center 2xl:py-40 interests">
-					<h1 className="text-4xl font-bold 2xl:text-5xl font-alegreya">Interests</h1>
-					<div className="flex flex-wrap justify-around px-6 mt-16 2xl:px-48 gap-x-2 gap-y-12 articles">
+				<section id="interests" className="py-16 text-center xl:py-40 interests">
+					<h1 className="text-4xl font-bold xl:text-5xl font-alegreya">Interests</h1>
+					<div className="flex flex-wrap justify-around px-6 mt-16 xl:px-48 gap-x-2 gap-y-12 articles">
 						{INTERESTS.map((interest) => {
 							return (
 								<article
@@ -224,7 +224,7 @@ export default function Home() {
 									className="flex flex-col items-center p-12 rounded shadow-lg hover:shadow-xl card"
 								>
 									{interest.icon}
-									<h2 className="mt-4 text-2xl font-alegreya">{interest.title}</h2>
+									<h2 className="mt-4 text-xl font-alegreya">{interest.title}</h2>
 									<p className="mt-6 text-lg">{interest.text}</p>
 								</article>
 							);
@@ -234,26 +234,26 @@ export default function Home() {
 				<section
 					id="projects"
 					ref={projectsRef}
-					className="flex flex-col-reverse px-12 py-16 2xl:flex-row 2xl:py-40 2xl:px-40 projects bg-dark"
+					className="flex flex-col-reverse px-12 py-16 xl:flex-row xl:py-40 xl:px-40 projects bg-dark"
 				>
 					<img
-						className="flex-shrink-0 object-cover mt-12 2xl:mt-0 2xl:w-96"
+						className="flex-shrink-0 object-cover mt-12 xl:mt-0 xl:w-96"
 						src="placeholder.png"
 						alt="project-image"
 					/>
-					<div className="flex-1 2xl:text-right description">
-						<h1 className="text-4xl font-bold 2xl:text-5xl font-alegreya">Projects (WIP)</h1>
-						<h2 className="mt-6 text-2xl font-bold 2xl:mt-8 2xl:text-3xl font-alegreya">Project title</h2>
-						<p className="mt-6 text-xl 2xl:mt-12 2xl:text-2xl">
+					<div className="flex-1 xl:text-right description">
+						<h1 className="text-4xl font-bold xl:text-5xl font-alegreya">Projects (WIP)</h1>
+						<h2 className="mt-6 text-xl font-bold xl:mt-8 xl:text-3xl font-alegreya">Project title</h2>
+						<p className="mt-6 text-xl xl:mt-12 xl:text-xl">
 							I’m highly interested in these technologies and my objective is to keep growing and
 							adquiring more knowledge. I’m highly interested in these technologies and my objective is to
 							keep growing and adquiring more knowledge
 						</p>
 					</div>
 				</section>
-				<section id="contact" ref={contactRef} className="py-16 text-center 2xl:py-40 contact">
-					<h1 className="text-4xl font-bold 2xl:text-5xl font-alegreya">Contact</h1>
-					<div className="flex flex-wrap justify-center gap-4 px-4 mt-16 2xl:px-0 2xl:gap-16 contact-links">
+				<section id="contact" ref={contactRef} className="py-16 text-center xl:py-40 contact">
+					<h1 className="text-4xl font-bold xl:text-5xl font-alegreya">Contact</h1>
+					<div className="flex flex-wrap justify-center gap-4 px-4 mt-16 xl:px-0 xl:gap-16 contact-links">
 						{CONTACT_LINKS.map((link) => {
 							return (
 								<a
@@ -279,8 +279,8 @@ export default function Home() {
 					</div>
 					<form className="flex flex-col items-center gap-6 mt-24 contact-form" onSubmit={sendEmail}>
 						<input type="hidden" name="contact_number" />
-						<div className="flex flex-col items-start w-5/6 gap-4 2xl:items-center 2xl:flex-row 2xl:w-2/6 row">
-							<label className="w-12 text-xl text-left 2xl:w-24">Name</label>
+						<div className="flex flex-col items-start w-5/6 gap-4 xl:items-center xl:flex-row xl:w-2/6 row">
+							<label className="w-12 text-xl text-left xl:w-24">Name</label>
 							<input
 								ref={contactFormRef}
 								placeholder="Name"
@@ -289,8 +289,8 @@ export default function Home() {
 								name="user_name"
 							/>
 						</div>
-						<div className="flex flex-col items-start w-5/6 gap-4 2xl:items-center 2xl:flex-row 2xl:w-2/6 row">
-							<label className="w-12 text-xl text-left 2xl:w-24">Email</label>
+						<div className="flex flex-col items-start w-5/6 gap-4 xl:items-center xl:flex-row xl:w-2/6 row">
+							<label className="w-12 text-xl text-left xl:w-24">Email</label>
 							<input
 								placeholder="Email"
 								className="w-full px-4 py-2 rounded bg-dark focus:outline-none focus:ring-4 focus:ring-purple-400 focus:border-transparent"
@@ -298,15 +298,15 @@ export default function Home() {
 								name="user_email"
 							/>
 						</div>
-						<div className="flex flex-col items-start w-5/6 gap-4 2xl:items-center 2xl:flex-row 2xl:w-2/6 row">
-							<label className="w-12 text-xl text-left 2xl:w-24">Message</label>
+						<div className="flex flex-col items-start w-5/6 gap-4 xl:items-center xl:flex-row xl:w-2/6 row">
+							<label className="w-12 text-xl text-left xl:w-24">Message</label>
 							<textarea
 								placeholder="Hi! I want to talk to you"
 								className="w-full h-40 px-4 py-2 rounded resize-none bg-dark focus:outline-none focus:ring-4 focus:ring-purple-400 focus:border-transparent"
 								name="message"
 							/>
 						</div>
-						<div className="flex justify-end w-5/6 gap-4 2xl:w-2/6 submit row">
+						<div className="flex justify-end w-5/6 gap-4 xl:w-2/6 submit row">
 							<input
 								className="px-4 py-2 text-xl rounded cursor-pointer bg-dark font-alegreya focus:outline-none focus:ring-4 focus:ring-purple-400 focus:border-transparent"
 								type="submit"
@@ -317,9 +317,9 @@ export default function Home() {
 				</section>
 			</main>
 
-			<footer className="flex flex-col items-center justify-center px-12 py-20 text-center 2xl:justify-around 2xl:flex-row 2xl:p-20 bg-dark">
+			<footer className="flex flex-col items-center justify-center px-12 py-20 text-center xl:justify-around xl:flex-row xl:p-20 bg-dark">
 				<img src="logo.svg" alt="logo" />
-				<p className="mt-6 2xl:mt-0">Copyright 2021 Jonathan Fernández Mertanen</p>
+				<p className="mt-6 xl:mt-0">Copyright 2021 Jonathan Fernández Mertanen</p>
 			</footer>
 		</div>
 	);
