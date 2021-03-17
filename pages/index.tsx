@@ -151,23 +151,23 @@ export default function Home() {
 				{loaded && <ReactTooltip delayShow={300} effect={'solid'} />}
 				<section
 					id="home"
-					className="flex flex-col-reverse items-center justify-end px-12 bg-no-repeat xl:h-screen pt-28 mt-22 xl:flex-row xl:pl-44 main-hero"
+					className="flex flex-col-reverse items-center justify-end px-12 pt-24 bg-no-repeat xl:h-screen xl:pt-0 mt-22 xl:flex-row xl:pl-24 2xl:pl-44 main-hero"
 				>
-					<div className="xl:flex-1 xl:mr-40 left-column">
+					<div className="xl:flex-1 xl:mr-28 2xl:mr-40 left-column">
 						<img src="logo.svg" alt="logo" className="absolute w-16 top-10 left-8 xl:w-auto xl:left-16" />
-						<h1 className="mt-8 text-4xl text-center xl:mt-0 xl:text-left font-alegreya xl:text-8xl">
+						<h1 className="mt-8 text-4xl text-center md:text-6xl xl:mt-0 xl:text-7xl xl:text-left font-alegreya 2xl:text-8xl">
 							Hi, I'm <b>Jonathan</b>
 						</h1>
-						<p className="px-12 mt-6 text-xl leading-snug text-center xl:text-left xl:px-0 text-1xl xl:text-4xl">
+						<p className="px-12 mt-6 text-xl leading-snug text-center md:text-2xl xl:text-left xl:px-0 text-1xl xl:text-3xl 2xl:text-4xl">
 							I'm an Information Systems Engineer, Full Stack Developer and web enthusiast from Granada,
 							Spain.
 						</p>
-						<div className="flex gap-8 my-14 xl:my-0 xl:mt-12 buttons">
+						<div className="flex justify-center gap-8 xl:justify-start my-14 xl:my-0 xl:mt-12 buttons">
 							<button
 								onClick={() => {
 									scrollTo(projectsRef);
 								}}
-								className="px-10 py-2 text-xl font-bold tracking-wide rounded shadow-xl xl:py-3 xl:text-xl xl:px-14 gradient-1 focus:outline-none focus:ring-4 focus:ring-purple-400 focus:border-transparent"
+								className="px-10 py-2 text-xl font-bold tracking-wide rounded shadow-xl md:px-12 md:py-3 xl:py-3 xl:text-xl xl:px-14 gradient-1 focus:outline-none focus:ring-4 focus:ring-purple-400 focus:border-transparent"
 							>
 								Projects
 							</button>
@@ -182,7 +182,7 @@ export default function Home() {
 						</div>
 					</div>
 					<div className="xl:flex-1 right-column">
-						<img src="hero-image.png" alt="hero-image" />
+						<img className="md:w-4/5 " src="hero-image.png" alt="hero-image" />
 					</div>
 				</section>
 				<section
@@ -279,7 +279,7 @@ export default function Home() {
 					</div>
 					<form className="flex flex-col items-center gap-6 mt-24 contact-form" onSubmit={sendEmail}>
 						<input type="hidden" name="contact_number" />
-						<div className="flex flex-col items-start w-5/6 gap-4 xl:items-center xl:flex-row xl:w-2/6 row">
+						<div className="flex flex-col items-start w-5/6 gap-4 2xl:w-5/12 xl:items-center xl:flex-row xl:w-4/6 row">
 							<label className="w-12 text-xl text-left xl:w-24">Name</label>
 							<input
 								ref={contactFormRef}
@@ -289,7 +289,7 @@ export default function Home() {
 								name="user_name"
 							/>
 						</div>
-						<div className="flex flex-col items-start w-5/6 gap-4 xl:items-center xl:flex-row xl:w-2/6 row">
+						<div className="flex flex-col items-start w-5/6 gap-4 2xl:w-5/12 xl:items-center xl:flex-row xl:w-4/6 row">
 							<label className="w-12 text-xl text-left xl:w-24">Email</label>
 							<input
 								placeholder="Email"
@@ -298,7 +298,7 @@ export default function Home() {
 								name="user_email"
 							/>
 						</div>
-						<div className="flex flex-col items-start w-5/6 gap-4 xl:items-center xl:flex-row xl:w-2/6 row">
+						<div className="flex flex-col items-start w-5/6 gap-4 2xl:w-5/12 xl:items-center xl:flex-row xl:w-4/6 row">
 							<label className="w-12 text-xl text-left xl:w-24">Message</label>
 							<textarea
 								placeholder="Hi! I want to talk to you"
@@ -306,7 +306,7 @@ export default function Home() {
 								name="message"
 							/>
 						</div>
-						<div className="flex justify-end w-5/6 gap-4 xl:w-2/6 submit row">
+						<div className="flex justify-end w-5/6 gap-4 2xl:w-5/12 xl:w-4/6 submit row">
 							<input
 								className="px-4 py-2 text-xl rounded cursor-pointer bg-dark font-alegreya focus:outline-none focus:ring-4 focus:ring-purple-400 focus:border-transparent"
 								type="submit"
