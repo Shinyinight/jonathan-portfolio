@@ -1,6 +1,6 @@
 import Head from 'next/head';
-import ReactTooltip from 'react-tooltip';
 import { useEffect, useRef, useState } from 'react';
+import ReactTooltip from 'react-tooltip';
 import Home from '../sections/Home';
 import Skills from '../sections/Skills';
 import Interests from '../sections/Interests';
