@@ -1,5 +1,6 @@
 {
 	"name": "portfolio-v2",
+	"description": "Jonathan Fernández page/portfolio",
 	"version": "1.0",
 	"private": true,
 	"scripts": {
