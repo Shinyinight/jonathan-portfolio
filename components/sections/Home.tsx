@@ -12,11 +12,11 @@ const Home = ({ projectsRef, contactRef }: HomeProps) => {
 	return (
 		<section
 			id="home"
-			className="container flex flex-col-reverse items-center justify-end px-6 pt-24 m-auto bg-no-repeat xl:h-screen xl:pt-0 mt-22 xl:flex-row xl:pl-24 2xl:pl-44 main-hero"
+			className="container flex flex-col-reverse items-center justify-end min-h-screen px-6 pt-24 pb-10 m-auto bg-no-repeat xl:h-screen xl:py-0 mt-22 xl:flex-row xl:pl-24 2xl:pl-44 main-hero"
 		>
-			<div className="xl:flex-1 xl:mr-28">
-				<div className="absolute z-0 top-10 left-8 xl:w-14 xl:left-16">
-					<div className="relative w-14 h-14">
+			<div className="flex-1 xl:flex-1 xl:mr-28">
+				<div className="absolute left-0 z-0 w-full top-10 xl:w-14 xl:left-16">
+					<div className="relative mx-auto w-14 h-14">
 						<Image layout="fill" objectFit="contain" src="/logo.svg" alt="logo portfolio" />
 					</div>
 				</div>
@@ -45,8 +45,8 @@ const Home = ({ projectsRef, contactRef }: HomeProps) => {
 					</button>
 				</div>
 			</div>
-			<div className="relative flex justify-center h-full overflow-hidden xl:flex-1 2xl:w-96 2xl:h-96 md:w-4/5">
-				<div className="relative rounded-full shadow-lg w-96 h-96">
+			<div className="relative flex items-center justify-center flex-1 h-full mt-8 overflow-hidden xl:flex-1 2xl:w-96 2xl:h-96 md:w-4/5">
+				<div className="relative w-56 h-56 rounded-full shadow-lg xl:w-96 xl:h-96">
 					<Image
 						className="overflow-visible rounded-full shadow-lg"
 						layout="fill"
