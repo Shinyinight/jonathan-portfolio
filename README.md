@@ -1,4 +1,4 @@
-# 👋 Hi visitor! Welcome to my portfolio v2 project
+# 👋 Hi visitor! Welcome to my portfolio project
 
 ## I'm **Jonathan Fernández Mertanen** and this is the source of my personal page/portfolio
 
