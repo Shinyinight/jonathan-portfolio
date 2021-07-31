@@ -4,12 +4,11 @@ interface ProjectsProps {
 	projectsRef: MutableRefObject<any>;
 }
 
-export default function Projects({ projectsRef }: ProjectsProps) {
+const Projects = ({ projectsRef }: ProjectsProps) => {
 	return (
 		<section
-			id="projects"
 			ref={projectsRef}
-			className="flex flex-col-reverse px-12 py-16 xl:flex-row xl:py-40 xl:px-40 projects bg-dark"
+			className="flex flex-col-reverse min-h-screen px-12 py-16 xl:flex-row xl:py-40 xl:px-40 projects bg-dark"
 		>
 			<img
 				className="flex-shrink-0 object-cover mt-12 xl:mt-0 xl:w-96"
@@ -27,4 +26,6 @@ export default function Projects({ projectsRef }: ProjectsProps) {
 			</div>
 		</section>
 	);
-}
+};
+
+export default Projects;

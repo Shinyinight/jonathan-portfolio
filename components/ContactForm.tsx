@@ -5,7 +5,7 @@ interface ContactFormProps {
 	contactFormRef: MutableRefObject<any>;
 }
 
-export default function ContactForm({ contactFormRef }: ContactFormProps) {
+const ContactForm = ({ contactFormRef }: ContactFormProps) => {
 	const sendEmail = (e) => {
 		e.preventDefault();
 
@@ -44,7 +44,7 @@ export default function ContactForm({ contactFormRef }: ContactFormProps) {
 			<div className="flex flex-col items-start w-5/6 gap-4 2xl:w-5/12 xl:items-center xl:flex-row xl:w-4/6 row">
 				<label className="w-12 text-xl text-left xl:w-24">Message</label>
 				<textarea
-					placeholder="Hi! I want to talk to you"
+					placeholder="Hi! I want to talk with you"
 					className="w-full h-40 px-4 py-2 rounded resize-none bg-dark focus:outline-none focus:ring-4 focus:ring-purple-400 focus:border-transparent"
 					name="message"
 				/>
@@ -58,4 +58,6 @@ export default function ContactForm({ contactFormRef }: ContactFormProps) {
 			</div>
 		</form>
 	);
-}
+};
+
+export default ContactForm;

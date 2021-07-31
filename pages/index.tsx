@@ -1,25 +1,33 @@
 import Head from 'next/head';
 import { useEffect, useRef, useState } from 'react';
 import ReactTooltip from 'react-tooltip';
-import Home from '../sections/Home';
-import Skills from '../sections/Skills';
-import Interests from '../sections/Interests';
-import Projects from '../sections/Projects';
-import Contact from '../sections/Contact';
-import Footer from '../components/Footer';
 
-export default function Index() {
-	const [loaded, setLoaded] = useState(false);
+import Home from '@sections/Home';
+import Skills from '@sections/Skills';
+import Interests from '@sections/Interests';
+import Projects from '@sections/Projects';
+import Contact from '@sections/Contact';
+import Footer from '@components/Footer';
+import Loader from '@components/Loader';
+import BackToTop from '@components/BackToTop';
+
+const Index = () => {
+	const [loading, setLoading] = useState(true);
 	const contactRef = useRef(null);
 	const contactFormRef = useRef(null);
 	const projectsRef = useRef(null);
 
 	useEffect(() => {
-		setLoaded(true);
+		if (loading) document.body.style.overflow = 'hidden';
+
+		setTimeout(() => {
+			setLoading(false);
+			document.body.style.overflow = 'auto';
+		}, 4000);
 	}, []);
 
 	return (
-		<div className="portfolio">
+		<div>
 			<Head>
 				<title>&gt;jfm | Jonathan Fernández Mertanen</title>
 				<link rel="icon" href="/favicon.ico" />
@@ -33,15 +41,19 @@ export default function Index() {
 					rel="stylesheet"
 				/>
 			</Head>
+			<Loader loading={loading} />
 			<main>
-				{loaded && <ReactTooltip delayShow={300} effect={'solid'} />}
+				{!loading && <ReactTooltip delayShow={300} effect={'solid'} />}
 				<Home projectsRef={projectsRef} contactRef={contactRef} />
 				<Skills />
 				<Interests />
 				<Projects projectsRef={projectsRef} />
 				<Contact contactRef={contactRef} contactFormRef={contactFormRef} />
+				<BackToTop />
 			</main>
 			<Footer />
 		</div>
 	);
-}
+};
+
+export default Index;
