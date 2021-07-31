@@ -1,7 +1,11 @@
 {
 	"name": "portfolio-v2",
 	"description": "Jonathan Fernández page/portfolio",
-	"version": "1.0",
+	"version": "1.0.0",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/jonathanfernandezfm/portfolio-v2"
+	},
 	"private": true,
 	"scripts": {
 		"dev": "next dev",
