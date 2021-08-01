@@ -11,7 +11,10 @@ interface ContactProps {
 
 const Contact = ({ contactRef, contactFormRef }: ContactProps) => {
 	return (
-		<section ref={contactRef} className="flex flex-col justify-center py-16 text-center xl:py-40 contact">
+		<section
+			ref={contactRef}
+			className="flex flex-col justify-center min-h-screen py-16 text-center xl:py-40 contact"
+		>
 			<h1 className="text-4xl font-bold xl:text-5xl font-alegreya">Contact</h1>
 			<div className="flex flex-wrap justify-center gap-4 px-4 mt-16 xl:px-0 xl:gap-16 contact-links">
 				{contact_links.map((link) => {
@@ -20,22 +23,13 @@ const Contact = ({ contactRef, contactFormRef }: ContactProps) => {
 							key={link.name}
 							data-tip={link.name}
 							href={link.url}
-							target="_blank"
+							target={link.blank ? '_blank' : ''}
 							className="p-2 rounded link-contact focus:outline-none focus:ring-4 focus:ring-purple-400 focus:border-transparent"
 						>
 							{link.icon}
 						</a>
 					);
 				})}
-				<button
-					onClick={() => {
-						contactFormRef.current.focus();
-					}}
-					data-tip={'Email'}
-					className="p-2 rounded link-contact focus:outline-none focus:ring-4 focus:ring-purple-400 focus:border-transparent"
-				>
-					<Envelope size={68} />
-				</button>
 			</div>
 			<ContactForm contactFormRef={contactFormRef} />
 		</section>

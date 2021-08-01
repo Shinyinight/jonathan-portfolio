@@ -7,9 +7,10 @@ import Skills from '@sections/Skills';
 import Interests from '@sections/Interests';
 import Projects from '@sections/Projects';
 import Contact from '@sections/Contact';
-import Footer from '@components/Footer';
-import Loader from '@components/Loader';
+import Footer from '@components/layout/Footer';
+import Loader from '@components/layout/Loader';
 import BackToTop from '@components/BackToTop';
+import Main from '@components/layout/Main';
 
 const Index = () => {
 	const [loading, setLoading] = useState(true);
@@ -42,7 +43,8 @@ const Index = () => {
 				/>
 			</Head>
 			<Loader loading={loading} />
-			<main>
+
+			<Main>
 				{!loading && <ReactTooltip delayShow={300} effect={'solid'} />}
 				<Home projectsRef={projectsRef} contactRef={contactRef} />
 				<Skills />
@@ -50,7 +52,8 @@ const Index = () => {
 				<Projects projectsRef={projectsRef} />
 				<Contact contactRef={contactRef} contactFormRef={contactFormRef} />
 				<BackToTop />
-			</main>
+			</Main>
+
 			<Footer />
 		</div>
 	);
