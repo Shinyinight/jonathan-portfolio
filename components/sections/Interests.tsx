@@ -3,7 +3,7 @@ import interests from '@data/interests';
 const Interests = () => {
 	return (
 		<section id="interests" className="py-16 text-center xl:py-40 interests">
-			<h1 className="text-4xl font-bold xl:text-5xl font-alegreya">Interests</h1>
+			<h1 className="text-4xl font-bold xl:text-5xl font-rubik">Interests</h1>
 			<div className="flex flex-wrap justify-around px-6 mt-16 xl:px-48 gap-x-2 gap-y-12 articles">
 				{interests.map((interest) => {
 					return (

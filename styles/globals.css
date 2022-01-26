@@ -13,8 +13,8 @@ body {
 }
 
 html {
-	background-color: #080024;
-	background-image: url('../public/background.png');
+	background-color: #0c0c0c;
+	/* background-image: url('../public/background.png'); */
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -50,11 +50,11 @@ input:-webkit-autofill:active {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-	background: #4611d1;
+	background: #222;
 	border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-	background: #270a7d;
+	background: #222;
 }

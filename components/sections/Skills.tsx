@@ -5,7 +5,7 @@ import skills from '@data/skills';
 const Skills = () => {
 	return (
 		<section id="my-skills" className="flex flex-col items-center py-16 text-center xl:py-40 my-skills bg-dark">
-			<h1 className="text-4xl font-bold xl:text-5xl font-alegreya">My skills</h1>
+			<h1 className="text-5xl font-bold xl:text-5xl font-rubik">My skills</h1>
 			<p className="px-8 mt-10 text-xl xl:text-3xl">
 				I'm looking to improve my skills and learn new technologies / areas
 			</p>
@@ -14,9 +14,13 @@ const Skills = () => {
 					{skills.map((skill) => {
 						return (
 							<li className="relative flex-shrink-0" key={skill.name} data-tip={skill.name}>
-								<img src={skill.image} alt="logo" className="relative z-10 object-cover w-16 xl:w-24" />
 								<img
-									src={skill.image}
+									src={`/images/${skill.image}`}
+									alt="logo"
+									className="relative z-10 object-cover w-16 xl:w-24"
+								/>
+								<img
+									src={`/images/${skill.image}`}
 									alt="logo"
 									className="absolute top-0 z-0 object-cover w-16 xl:w-24 blur"
 								/>

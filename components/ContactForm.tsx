@@ -1,22 +1,22 @@
 import { MutableRefObject } from 'react';
-import emailjs from 'emailjs-com';
 
 interface ContactFormProps {
 	contactFormRef: MutableRefObject<any>;
 }
 
 const ContactForm = ({ contactFormRef }: ContactFormProps) => {
-	const sendEmail = (e) => {
+	const sendEmail = async (e) => {
 		e.preventDefault();
 
-		emailjs.sendForm('service_xdx644q', 'template_9b28zgq', e.target, 'user_HuEZVyrJjGHRjfcrrhQ7r').then(
-			(result) => {
-				console.log(result.text);
-			},
-			(error) => {
-				console.log(error.text);
-			}
-		);
+		await fetch('/api/email', {
+			method: 'POST',
+			headers: { 'Content-Type': 'application/json' },
+			body: JSON.stringify({
+				user_name: e.target.user_name.value,
+				user_email: e.target.user_email.value,
+				message: e.target.message.value,
+			}),
+		});
 	};
 
 	return (
@@ -27,7 +27,7 @@ const ContactForm = ({ contactFormRef }: ContactFormProps) => {
 				<input
 					ref={contactFormRef}
 					placeholder="Name"
-					className="w-full px-4 py-2 rounded bg-dark focus:outline-none focus:ring-4 focus:ring-purple-400 focus:border-transparent"
+					className="w-full px-4 py-2 rounded bg-dark focus:outline-none focus:ring-4 focus:ring-white focus:border-transparent"
 					type="text"
 					name="user_name"
 				/>
@@ -36,7 +36,7 @@ const ContactForm = ({ contactFormRef }: ContactFormProps) => {
 				<label className="w-12 text-xl text-left xl:w-24">Email</label>
 				<input
 					placeholder="Email"
-					className="w-full px-4 py-2 rounded bg-dark focus:outline-none focus:ring-4 focus:ring-purple-400 focus:border-transparent"
+					className="w-full px-4 py-2 rounded bg-dark focus:outline-none focus:ring-4 focus:ring-white focus:border-transparent"
 					type="email"
 					name="user_email"
 				/>
@@ -45,13 +45,13 @@ const ContactForm = ({ contactFormRef }: ContactFormProps) => {
 				<label className="w-12 text-xl text-left xl:w-24">Message</label>
 				<textarea
 					placeholder="Hi! I want to talk with you"
-					className="w-full h-40 px-4 py-2 rounded resize-none bg-dark focus:outline-none focus:ring-4 focus:ring-purple-400 focus:border-transparent"
+					className="w-full h-40 px-4 py-2 rounded resize-none bg-dark focus:outline-none focus:ring-4 focus:ring-white focus:border-transparent"
 					name="message"
 				/>
 			</div>
 			<div className="flex justify-end w-5/6 gap-4 2xl:w-5/12 xl:w-4/6 submit row">
 				<input
-					className="px-4 py-2 text-xl rounded cursor-pointer bg-dark font-alegreya focus:outline-none focus:ring-4 focus:ring-purple-400 focus:border-transparent"
+					className="px-4 py-2 text-xl rounded cursor-pointer bg-dark font-alegreya focus:outline-none focus:ring-4 focus:ring-white focus:border-transparent"
 					type="submit"
 					value="Send"
 				/>

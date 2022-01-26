@@ -30,7 +30,9 @@ module.exports = {
 			},
 		},
 		fontFamily: {
-			alegreya: ['Alegreya'],
+			alegreya: "'Alegreya Sans', sans",
+			rubik: "'Rubik', sans-serif",
+			bebas: "'Bebas Neue', sans-serif",
 		},
 	},
 	variants: {

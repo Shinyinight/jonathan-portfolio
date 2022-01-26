@@ -1,9 +1,9 @@
 .bg-dark {
-	background-color: #080024;
+	background-color: #060606;
 }
 
 .button-primary {
-	background: linear-gradient(96.1deg, rgba(0, 66, 196, 0.9) -62.42%, rgba(183, 0, 187, 0.9) 158.64%);
+	background: linear-gradient(96.1deg, rgb(0 0 0 / 90%) -62.42%, rgb(86 86 86 / 90%) 158.64%);
 }
 
 .button-secondary {
@@ -21,11 +21,11 @@
 
 .card {
 	width: 400px;
-	background-color: #0d022e;
+	background-color: #060606;
 }
 
 .link-contact {
-	background: #080024;
+	background: #060606;
 }
 
 .link-contact:hover {
