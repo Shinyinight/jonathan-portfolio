@@ -40,7 +40,7 @@ const Index = () => {
 				<Home projectsRef={projectsRef} contactRef={contactRef} />
 				<Skills />
 				<Interests />
-				{/* <Projects projectsRef={projectsRef} /> */}
+				<Projects projectsRef={projectsRef} />
 				<Contact contactRef={contactRef} contactFormRef={contactFormRef} />
 				<BackToTop />
 			</Main>
