@@ -17,7 +17,6 @@ export default async (req, res) => {
 	const buffer = await file.arrayBuffer();
 
 	res.setHeader('Content-Type', 'application/pdf');
-	res.setHeader('Content-Disposition', 'attachment; filename=cv.pdf');
 	res.setHeader('Content-Length', file.size);
 	res.write(toBuffer(buffer), 'binary');
 	res.end();
