@@ -12,7 +12,8 @@ const Home = ({ projectsRef, contactRef }: HomeProps) => {
 	return (
 		<section
 			id="home"
-			className="container flex flex-col items-center justify-end min-h-screen px-6 pt-24 pb-10 m-auto bg-no-repeat xl:h-screen xl:py-0 mt-22 xl:flex-row main-hero">
+			className="container flex flex-col items-center justify-end min-h-screen px-6 pt-24 pb-10 m-auto bg-no-repeat xl:h-screen xl:py-0 mt-22 xl:flex-row main-hero"
+		>
 			<div className="relative flex items-center justify-center flex-1 h-full mt-8 overflow-hidden xl:flex-1 2xl:w-96 2xl:h-96 md:w-4/5">
 				<div className="relative w-56 h-56 bg-white border-8 border-white rounded-full shadow-lg xl:w-96 xl:h-96">
 					<Image
@@ -43,14 +44,16 @@ const Home = ({ projectsRef, contactRef }: HomeProps) => {
 						onClick={() => {
 							scrollTo(projectsRef);
 						}}
-						className="px-10 py-2 text-xl font-bold tracking-wide rounded shadow-xl md:px-12 md:py-3 xl:py-3 xl:text-xl xl:px-14 button-primary focus:outline-none focus:ring-4 focus:ring-purple-400 focus:border-transparent">
+						className="px-10 py-2 text-xl font-bold tracking-wide rounded shadow-xl md:px-12 md:py-3 xl:py-3 xl:text-xl xl:px-14 button-primary focus:outline-none focus:ring-4 focus:ring-purple-400 focus:border-transparent"
+					>
 						Projects
 					</button>
 					<button
 						onClick={() => {
 							scrollTo(contactRef);
 						}}
-						className="px-10 py-2 text-xl font-bold tracking-wide rounded shadow-xl xl:py-3 xl:text-xl xl:px-14 button-primary focus:outline-none focus:ring-4 focus:ring-white focus:border-transparent">
+						className="px-10 py-2 text-xl font-bold tracking-wide rounded shadow-xl xl:py-3 xl:text-xl xl:px-14 button-primary focus:outline-none focus:ring-4 focus:ring-white focus:border-transparent"
+					>
 						Contact
 					</button>
 				</div>

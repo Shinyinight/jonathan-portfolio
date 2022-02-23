@@ -27,7 +27,7 @@ const ContactForm = ({ contactFormRef }: ContactFormProps) => {
 				<input
 					ref={contactFormRef}
 					placeholder="Name"
-					className="w-full px-4 py-2 rounded bg-dark focus:outline-none focus:ring-4 focus:ring-white focus:border-transparent"
+					className="w-full px-4 py-2 rounded bg-dark focus:outline-none focus:ring-4 focus:ring-white focus:border-transparent ring-2 ring-zinc-900"
 					type="text"
 					name="user_name"
 				/>
@@ -36,7 +36,7 @@ const ContactForm = ({ contactFormRef }: ContactFormProps) => {
 				<label className="w-12 text-xl text-left xl:w-24">Email</label>
 				<input
 					placeholder="Email"
-					className="w-full px-4 py-2 rounded bg-dark focus:outline-none focus:ring-4 focus:ring-white focus:border-transparent"
+					className="w-full px-4 py-2 rounded bg-dark focus:outline-none focus:ring-4 focus:ring-white focus:border-transparent ring-2 ring-zinc-900"
 					type="email"
 					name="user_email"
 				/>
@@ -45,13 +45,13 @@ const ContactForm = ({ contactFormRef }: ContactFormProps) => {
 				<label className="w-12 text-xl text-left xl:w-24">Message</label>
 				<textarea
 					placeholder="Hi! I want to talk with you"
-					className="w-full h-40 px-4 py-2 rounded resize-none bg-dark focus:outline-none focus:ring-4 focus:ring-white focus:border-transparent"
+					className="w-full h-40 px-4 py-2 rounded resize-none bg-dark focus:outline-none focus:ring-4 focus:ring-white focus:border-transparent ring-2 ring-zinc-900"
 					name="message"
 				/>
 			</div>
 			<div className="flex justify-end w-5/6 gap-4 2xl:w-5/12 xl:w-4/6 submit row">
 				<input
-					className="px-4 py-2 text-xl rounded cursor-pointer bg-dark font-alegreya focus:outline-none focus:ring-4 focus:ring-white focus:border-transparent"
+					className="px-4 py-2 text-xl rounded cursor-pointer bg-dark font-alegreya focus:outline-none focus:ring-4 focus:ring-white focus:border-transparent ring-2 ring-zinc-900"
 					type="submit"
 					value="Send"
 				/>

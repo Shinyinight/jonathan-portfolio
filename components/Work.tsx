@@ -17,9 +17,9 @@ interface WorkProps {
 
 const Work = ({ image, title, children, tech, link }: WorkProps) => {
 	return (
-		<article className="min-w-full flex flex-col gap-4 xl:gap-28 xl:flex-row xl:mt-24 mt-2 work px-12 xl:px-40">
+		<article className="flex flex-col min-w-full gap-4 px-12 mt-2 xl:gap-28 xl:flex-row xl:mt-24 work xl:px-40">
 			<img
-				className="flex-shrink-0 object-cover mt-10 xl:mt-0 md:max-h-[400px] 2xl:w-[600px] max-h-[900px] xl:w-[500px] xl:max-h-[500px] 2xl:max-h-[800px] ring-8 ring-gray-900 rounded object-left-top"
+				className="flex-shrink-0 object-cover mt-10 xl:mt-0 md:max-h-[400px] 2xl:w-[600px] max-h-[900px] xl:w-[500px] xl:max-h-[500px] 2xl:max-h-[800px] ring-4 ring-zinc-900 rounded object-left-top"
 				src={`images/${image}`}
 				alt="project-image"
 			/>
@@ -30,7 +30,8 @@ const Work = ({ image, title, children, tech, link }: WorkProps) => {
 						<a
 							href={link.link}
 							target="_blank"
-							className={`texl-xl xl:text-xl xl:underline xl:underline-offset-2 hover:${link.color}`}>
+							className={`texl-xl xl:text-xl xl:underline xl:underline-offset-2 hover:${link.color}`}
+						>
 							{link.text}
 						</a>
 					</div>
@@ -40,7 +41,8 @@ const Work = ({ image, title, children, tech, link }: WorkProps) => {
 					{tech.map((tech) => {
 						return (
 							<div
-								className={`relative ${!tech.effect ? 'bg-white rounded-full ring-2 ring-white' : ''}`}>
+								className={`relative ${!tech.effect ? 'bg-white rounded-full ring-2 ring-white' : ''}`}
+							>
 								<img
 									src={`/images/${tech.img}`}
 									alt="logo"
