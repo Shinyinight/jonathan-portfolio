@@ -15,6 +15,7 @@ const ContactForm = ({ contactFormRef }: ContactFormProps) => {
 				user_name: e.target.user_name.value,
 				user_email: e.target.user_email.value,
 				message: e.target.message.value,
+				is_bot: e.target.is_bot.value,
 			}),
 		});
 	};
@@ -49,6 +50,11 @@ const ContactForm = ({ contactFormRef }: ContactFormProps) => {
 					name="message"
 				/>
 			</div>
+			<input
+				className="w-full px-4 py-2 rounded bg-dark focus:outline-none focus:ring-4 focus:ring-white focus:border-transparent ring-2 ring-zinc-900"
+				type="hidden"
+				name="is_bot"
+			/>
 			<div className="flex justify-end w-5/6 gap-4 2xl:w-5/12 xl:w-4/6 submit row">
 				<input
 					className="px-4 py-2 text-xl rounded cursor-pointer bg-dark font-alegreya focus:outline-none focus:ring-4 focus:ring-white focus:border-transparent ring-2 ring-zinc-900"

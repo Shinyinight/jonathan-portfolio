@@ -36,7 +36,7 @@ const Index = () => {
 				/>
 			</Head>
 			<Main>
-				{<ReactTooltip delayShow={300} effect={'solid'} />}
+				<ReactTooltip delayShow={300} effect={'solid'} />
 				<Home projectsRef={projectsRef} contactRef={contactRef} />
 				<Skills />
 				<Interests />

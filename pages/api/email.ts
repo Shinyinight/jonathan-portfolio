@@ -1,7 +1,6 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 
 export default async (req, res) => {
-	console.log(req.body);
 	var data = {
 		service_id: process.env.MAILJET_SERVICE_ID,
 		template_id: process.env.MAILJET_TEMPLATE_ID,
