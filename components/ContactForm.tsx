@@ -9,6 +9,7 @@ const ContactForm = ({ contactFormRef }: ContactFormProps) => {
 
 	const sendEmail = async (e) => {
 		e.preventDefault();
+		if (e.target.is_bot.value !== '') return;
 
 		setLoading(true);
 		await fetch('/api/email', {
@@ -18,7 +19,6 @@ const ContactForm = ({ contactFormRef }: ContactFormProps) => {
 				user_name: e.target.user_name.value,
 				user_email: e.target.user_email.value,
 				message: e.target.message.value,
-				is_bot: e.target.is_bot.value,
 				sender_os: navigator.userAgent,
 			}),
 		});
