@@ -10,6 +10,7 @@ const ContactForm = ({ contactFormRef }: ContactFormProps) => {
 	const sendEmail = async (e) => {
 		e.preventDefault();
 		if (e.target.is_bot.value !== '') return;
+		if (e.target.message.split(' ').length === 1) return;
 
 		setLoading(true);
 		await fetch('/api/email', {
