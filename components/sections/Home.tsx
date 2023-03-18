@@ -17,7 +17,7 @@ const Home = ({ projectsRef, contactRef }: HomeProps) => {
 			<div className="relative flex items-center justify-center flex-1 h-full mt-8 overflow-hidden xl:flex-1 2xl:w-96 2xl:h-96 md:w-4/5">
 				<div className="relative w-56 h-56 bg-white border-8 border-white rounded-full shadow-lg xl:w-96 xl:h-96">
 					<Image
-						className="overflow-visible rounded-full shadow-lg grayscale-0"
+						className="overflow-hidden rounded-full shadow-lg grayscale-0"
 						alt="Jonathan Photo"
 						width={400}
 						height={400}
