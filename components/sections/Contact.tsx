@@ -13,7 +13,7 @@ const Contact = ({ contactRef, contactFormRef }: ContactProps) => {
     return (
         <section
             ref={contactRef}
-            className="flex flex-col justify-center min-h-screen py-16 text-center xl:pb-40 contact"
+            className="container flex flex-col justify-center min-h-screen py-16 m-auto text-center xl:pb-40 contact w-fit"
         >
             <h1 className="text-4xl font-bold xl:text-5xl font-rubik">
                 Contact
@@ -23,10 +23,11 @@ const Contact = ({ contactRef, contactFormRef }: ContactProps) => {
                     return (
                         <a
                             key={link.name}
-                            data-tip={link.name}
+                            data-tooltip-id="tooltip"
+                            data-tooltip-content={link.name}
                             href={link.url}
                             target={link.blank ? "_blank" : ""}
-                            className="p-2 rounded link-contact focus:outline-none focus:ring-4 focus:ring-white focus:border-transparent"
+                            className="p-2 border-[1px] rounded border-neutral-700 hover:bg-neutral-900 bg-neutral-950 focus:outline-none focus:ring-4 focus:ring-neutral-800 focus:border-transparent"
                         >
                             {link.icon}
                         </a>

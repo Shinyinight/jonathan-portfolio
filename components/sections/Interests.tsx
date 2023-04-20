@@ -4,17 +4,17 @@ const Interests = () => {
     return (
         <section
             id="interests"
-            className="py-16 text-center xl:py-40 interests"
+            className="container py-16 m-auto text-center xl:py-40 interests"
         >
             <h1 className="text-4xl font-bold xl:text-5xl font-rubik">
                 Interests
             </h1>
-            <div className="flex flex-wrap justify-around px-6 mt-16 xl:px-48 gap-x-2 gap-y-12 articles">
+            <div className="flex flex-wrap justify-center gap-8 mt-16 xl:px-48 articles">
                 {interests.map((interest) => {
                     return (
                         <article
                             key={interest.title}
-                            className="flex flex-col items-center p-12 rounded shadow-lg hover:shadow-xl card"
+                            className="flex flex-col items-center justify-center p-12 align-middle border-[1px] rounded shadow-lg hover:shadow-xl card border-neutral-700 bg-neutral-950"
                         >
                             {interest.icon}
                             <h2 className="mt-4 text-2xl font-bold font-alegreya">

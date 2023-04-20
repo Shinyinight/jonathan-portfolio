@@ -1,7 +1,6 @@
 import Head from "next/head";
 import { useEffect, useRef, useState } from "react";
-import ReactTooltip from "react-tooltip";
-
+import { Tooltip as ReactTooltip } from "react-tooltip";
 import Home from "@/components/sections/Home";
 import Skills from "@/components/sections/Skills";
 import Interests from "@/components/sections/Interests";
@@ -20,23 +19,9 @@ const Index = () => {
         <div>
             <Head>
                 <title>&gt;jfm | Jonathan Fernández Mertanen</title>
-                <link rel="icon" href="/favicon.ico" />
-                <link rel="preconnect" href="https://fonts.gstatic.com" />
-                <link
-                    href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;700&display=swap"
-                    rel="stylesheet"
-                />
-                <link
-                    href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;700&display=swap"
-                    rel="stylesheet"
-                />
-                <link
-                    href="https://fonts.googleapis.com/css2?family=Alegreya+Sans&family=Bebas+Neue&family=Rubik:wght@400;500&display=swap"
-                    rel="stylesheet"
-                />
             </Head>
             <Main>
-                <ReactTooltip delayShow={300} effect={"solid"} />
+                <ReactTooltip id="tooltip" delayShow={300} variant="light" />
                 <Home projectsRef={projectsRef} contactRef={contactRef} />
                 <Skills />
                 <Interests />

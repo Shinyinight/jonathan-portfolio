@@ -1,58 +1,65 @@
 .bg-dark {
-	background-color: #060606;
+    background-color: #060606;
 }
 
 .button-primary {
-	/* background: linear-gradient(96.1deg, rgb(0 0 0 / 90%) -62.42%, rgb(86 86 86 / 90%) 158.64%); */
-	background-image: linear-gradient(
-		to right,
-		rgb(0 0 0 / 90%),
-		rgba(22, 22, 22, 0.9),
-		rgba(32, 25, 32, 0.9),
-		rgba(87, 42, 99, 0.9)
-	);
-	background-size: 300% 100%;
+    /* background: linear-gradient(96.1deg, rgb(0 0 0 / 90%) -62.42%, rgb(86 86 86 / 90%) 158.64%); */
+    background-image: linear-gradient(
+        to right,
+        rgb(0 0 0 / 90%),
+        rgba(22, 22, 22, 0.9),
+        rgba(32, 25, 32, 0.9),
+        rgba(87, 42, 99, 0.9)
+    );
+    background-size: 300% 100%;
 
-	moz-transition: all 0.4s ease-in-out;
-	-o-transition: all 0.4s ease-in-out;
-	-webkit-transition: all 0.4s ease-in-out;
-	transition: all 0.4s ease-in-out;
+    moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
 }
 
 .button-primary:hover {
-	background-position: 100% 0;
-	moz-transition: all 0.4s ease-in-out;
-	-o-transition: all 0.4s ease-in-out;
-	-webkit-transition: all 0.4s ease-in-out;
-	transition: all 0.4s ease-in-out;
+    background-position: 100% 0;
+    moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
 }
 
 .button-secondary {
-	color: #180652;
-	background: linear-gradient(96.1deg, rgba(151, 217, 255, 0.9) -62.42%, rgba(252, 91, 255, 0.9) 158.64%);
+    color: #180652;
+    background: linear-gradient(
+        96.1deg,
+        rgba(151, 217, 255, 0.9) -62.42%,
+        rgba(252, 91, 255, 0.9) 158.64%
+    );
 }
 
 .blur {
-	-webkit-filter: blur(20px);
-	-moz-filter: blur(20px);
-	-o-filter: blur(20px);
-	-ms-filter: blur(20px);
-	filter: blur(8px);
+    -webkit-filter: blur(20px);
+    -moz-filter: blur(20px);
+    -o-filter: blur(20px);
+    -ms-filter: blur(20px);
+    filter: blur(8px);
 }
 
 .card {
-	width: 400px;
-	background-color: #060606;
+    width: 400px;
 }
 
 .link-contact {
-	background: #060606;
+    background: #060606;
 }
 
 .link-contact:hover {
-	background: linear-gradient(96.1deg, rgba(0, 66, 196, 0.9) -62.42%, rgba(183, 0, 187, 0.9) 158.64%);
+    background: linear-gradient(
+        96.1deg,
+        rgba(0, 66, 196, 0.9) -62.42%,
+        rgba(183, 0, 187, 0.9) 158.64%
+    );
 }
 
 .work {
-	width: calc(100vw - 20rem);
+    width: calc(100vw - 20rem);
 }
