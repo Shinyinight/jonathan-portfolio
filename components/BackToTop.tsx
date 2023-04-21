@@ -41,7 +41,7 @@ const BackToTop = () => {
                 onClick={() => {
                     window.scrollTo({ top: 0, behavior: "smooth" });
                 }}
-                className="fixed bottom-8 right-8"
+                className="fixed z-20 bottom-8 right-8"
             >
                 <ArrowSquareUp size={48} />
             </button>

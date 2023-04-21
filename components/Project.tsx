@@ -25,10 +25,10 @@ const Project = ({ project }: ProjectProps) => {
     return (
         <article className="flex group z-10 relative flex-col gap-4 xl:gap-28 xl:flex-row  work border-[1px] rounded border-neutral-700 bg-neutral-950 w-fit overflow-hidden">
             <div
-                className="flex flex-1 gap-12 p-12 description"
+                className="flex flex-col flex-1 gap-12 p-8 xl:p-12 xl:flex-row description"
                 onMouseMove={(e) => setHoverBackgroundPosition(e)}
             >
-                <div className="h-full w-[400px] relative">
+                <div className="xl:h-full xl:w-[400px] w-full h-[200px] relative flex justify-center align-middle">
                     <Image
                         src={`${project.image}`}
                         alt="Project image"
@@ -44,13 +44,13 @@ const Project = ({ project }: ProjectProps) => {
                             <a
                                 href={project.link.link}
                                 target="_blank"
-                                className={`texl-xl xl:text-xl xl:underline xl:underline-offset-2 text-blue-300 hover:text-blue-400`}
+                                className={`texl-xl underline underline-offset-2 text-blue-300 hover:text-blue-400`}
                             >
                                 {project.link.text}
                             </a>
                         </div>
                     )}
-                    <p className="mt-6 text-xl">{project.content}</p>
+                    <p className="mt-6 text-lg xl:text-xl">{project.content}</p>
                 </div>
 
                 <div

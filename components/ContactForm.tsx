@@ -29,7 +29,7 @@ const ContactForm = ({ contactFormRef }: ContactFormProps) => {
 
     return (
         <form
-            className="flex flex-col items-center gap-6 mt-24 contact-form"
+            className="flex flex-col items-center gap-6 mx-6 mt-24 xl:mx-0 contact-form"
             onSubmit={sendEmail}
         >
             <input type="hidden" name="contact_number" />
@@ -38,7 +38,7 @@ const ContactForm = ({ contactFormRef }: ContactFormProps) => {
                 <input
                     ref={contactFormRef}
                     placeholder="John Doe"
-                    className="w-full px-4 py-2 border-[1px] rounded border-neutral-700 bg-dark focus:outline-none focus:ring-4 focus:ring-neutral-800 focus:border-transparent hover:bg-neutral-900 bg-neutral-950"
+                    className="w-full px-4 py-2 border-[1px] rounded border-neutral-700 bg-dark focus:outline-none focus:ring-2 focus:ring-neutral-800 focus:border-transparent hover:bg-neutral-900 bg-neutral-950"
                     type="text"
                     name="user_name"
                     required
@@ -48,7 +48,7 @@ const ContactForm = ({ contactFormRef }: ContactFormProps) => {
                 <label className="text-md">Email</label>
                 <input
                     placeholder="johndoe@gmail.com"
-                    className="w-full px-4 py-2 border-[1px] rounded border-neutral-700 bg-dark focus:outline-none focus:ring-4 focus:ring-neutral-800 focus:border-transparent hover:bg-neutral-900 bg-neutral-950"
+                    className="w-full px-4 py-2 border-[1px] rounded border-neutral-700 bg-dark focus:outline-none focus:ring-2 focus:ring-neutral-800 focus:border-transparent hover:bg-neutral-900 bg-neutral-950"
                     type="email"
                     name="user_email"
                     required
@@ -58,13 +58,13 @@ const ContactForm = ({ contactFormRef }: ContactFormProps) => {
                 <label className="text-md">Message</label>
                 <textarea
                     placeholder="Hi! I want to talk with you"
-                    className="w-full h-40 px-4 py-2 border-[1px] rounded resize-none border-neutral-700 bg-dark focus:outline-none focus:ring-4 focus:ring-neutral-800 focus:border-transparent hover:bg-neutral-900 bg-neutral-950"
+                    className="w-full h-40 px-4 py-2 border-[1px] rounded resize-none border-neutral-700 bg-dark focus:outline-none focus:ring-2 focus:ring-neutral-800 focus:border-transparent hover:bg-neutral-900 bg-neutral-950"
                     name="message"
                     required
                 />
             </div>
             <input
-                className="w-full px-4 py-2 border-[1px] rounded border-neutral-700 bg-dark focus:outline-none focus:ring-4 focus:ring-neutral-800 focus:border-transparent hover:bg-neutral-900 bg-neutral-950"
+                className="w-full px-4 py-2 border-[1px] rounded border-neutral-700 bg-dark focus:outline-none focus:ring-2 focus:ring-neutral-800 focus:border-transparent hover:bg-neutral-900 bg-neutral-950"
                 type="hidden"
                 name="is_bot"
             />

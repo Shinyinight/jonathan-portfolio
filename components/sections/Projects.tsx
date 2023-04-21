@@ -17,7 +17,7 @@ const Projects = ({ projectsRef }: ProjectsProps) => {
                 <h1 className="text-4xl font-bold text-center xl:text-5xl font-rubik">
                     Projects
                 </h1>
-                <div className="flex flex-col gap-6 mx-40 mt-24">
+                <div className="flex flex-col gap-6 mx-6 mt-24 xl:mx-40">
                     {projects.map((project, index) => {
                         return (
                             <Project key={index} project={project}></Project>

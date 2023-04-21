@@ -18,7 +18,7 @@ const Skills = () => {
                 </p>
                 <ScrollContainer
                     vertical={false}
-                    className="relative w-5/6 m-auto xl:w-3/5 scroll-container"
+                    className="relative w-full m-auto xl:w-3/5 scroll-container"
                 >
                     <ul
                         id="carrousel"
