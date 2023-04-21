@@ -12,7 +12,7 @@ const Skills = () => {
                 <h1 className="text-5xl font-bold xl:text-5xl font-rubik">
                     My skills
                 </h1>
-                <p className="px-8 mt-10 text-xl xl:text-3xl">
+                <p className="px-8 mt-16 text-xl xl:text-3xl">
                     I'm looking to improve my skills and learn new technologies
                     / areas
                 </p>

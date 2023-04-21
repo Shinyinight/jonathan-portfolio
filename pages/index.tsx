@@ -31,9 +31,8 @@ const Index = () => {
                     contactFormRef={contactFormRef}
                 />
                 <BackToTop />
+                <Footer />
             </Main>
-
-            <Footer />
         </div>
     );
 };

@@ -24,7 +24,7 @@ const Work = ({ image, title, children, tech, link }: WorkProps) => {
                 alt="project-image"
             />
             <div className="flex-1 description">
-                <h2 className="mt-6 text-3xl font-bold xl:mt-8 xl:text-4xl font-alegreya">
+                <h2 className="mt-6 text-3xl font-bold xl:mt-8 xl:text-4xl">
                     {title}
                 </h2>
                 {link && (

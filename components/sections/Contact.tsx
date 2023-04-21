@@ -18,7 +18,7 @@ const Contact = ({ contactRef, contactFormRef }: ContactProps) => {
             <h1 className="text-4xl font-bold xl:text-5xl font-rubik">
                 Contact
             </h1>
-            <div className="flex flex-wrap justify-center gap-4 px-4 mt-16 xl:px-0 xl:gap-16 contact-links">
+            <div className="flex flex-wrap justify-center gap-4 px-4 mt-24 xl:px-0 xl:gap-16 contact-links">
                 {contact_links.map((link) => {
                     return (
                         <a

@@ -1,6 +1,7 @@
 import Work from "@/components/Work";
 import useWindowDimensions from "hooks/useWindowDimensions";
 import { MutableRefObject, useRef, useState } from "react";
+import Project from "../Project";
 
 interface ProjectsProps {
     projectsRef: MutableRefObject<any>;
@@ -16,10 +17,98 @@ const Projects = ({ projectsRef }: ProjectsProps) => {
             ref={projectsRef}
             className="relative min-h-screen py-16 xl:py-40 projects bg-dark"
         >
-            <h1 className="text-4xl font-bold text-center xl:text-5xl font-rubik">
-                Projects
-            </h1>
-            {width < 700 && (
+            <div className="container m-auto">
+                <h1 className="text-4xl font-bold text-center xl:text-5xl font-rubik">
+                    Projects
+                </h1>
+                <div className="flex flex-col gap-6 mx-40 mt-24">
+                    <Project
+                        image="/work1.png"
+                        title="Plenion - Fullstack"
+                        tech={[
+                            { img: "angular.png", effect: true },
+                            { img: "java.png", effect: true },
+                            { img: "google-cloud.png", effect: true },
+                        ]}
+                    >
+                        3 years working on The Cloud Gate S.L in Granada
+                        developing a SaaS (Plenion 24/7) for Plenion, a Belgium
+                        organization that provides ERP facilities for the
+                        construction environment. This SaaS provides an API
+                        (developed in Java and Google Cloud) to integrate Cloud
+                        functionalities from Microsoft and Google into Plenion
+                        systems, mainly files, calendar and tasks. In addition,
+                        we provide a web application as a portal for customers
+                        to access this information. This web application is
+                        developed in Angular.
+                    </Project>
+                    <Project
+                        image="/work2_2.png"
+                        title="Bedroom Radio - Fullstack"
+                        link={{
+                            text: "Bedroom Radio",
+                            link: "https://bedroomradio.es",
+                            color: "text-blue-400",
+                        }}
+                        tech={[
+                            { img: "react.png", effect: true },
+                            { img: "nextjs.png", effect: false },
+                        ]}
+                    >
+                        Bedroom Radio is a project focused on bringing and
+                        discovering hispanic artists to people. The objective is
+                        to give voice and a safe space to emergent artists that
+                        have not much visibility. The application is built in
+                        Next.js and it plays a music playlist fetched from our
+                        own server. The backend is developed in Strapi CMS. It
+                        is used to add songs and playlists and many other
+                        functionalities that are shown in the application.
+                    </Project>
+
+                    <Project
+                        image="/work3_1.png"
+                        title="GTAV Private server - Fullstack"
+                        link={{
+                            text: "DespistaosRP",
+                            link: "https://despistaos.es",
+                            color: "text-blue-400",
+                        }}
+                        tech={[
+                            { img: "node.png", effect: true },
+                            { img: "react.png", effect: true },
+                        ]}
+                    >
+                        One of the biggest spanish communities of Grand Theft
+                        Auto Roleplay. I was part of this group of developers
+                        and designers that developed a private roleplay server
+                        for GTA V. The server was built in NodeJS and it used a
+                        Chromium embedded instance to show the interface,
+                        developed in React Component oriented. We worked with
+                        designers that would create the interfaces ingame before
+                        making them into code.
+                    </Project>
+
+                    <Project
+                        image="/work4_1.png"
+                        title="This Portfolio - Fullstack"
+                        link={{
+                            text: "Github",
+                            link: "https://github.com/jonathanfernandezfm/portfolio-v2",
+                            color: "text-red-600",
+                        }}
+                        tech={[
+                            { img: "react.png", effect: true },
+                            { img: "nextjs.png", effect: false },
+                        ]}
+                    >
+                        I built this porfolio to show my work, what I know and a
+                        bit of information about me. It is developed in Next.js.
+                        It uses the Next API server to send an email form aswell
+                        as other funcitonalities outside of this page.
+                    </Project>
+                </div>
+            </div>
+            {/* {width < 700 && (
                 <h2 className="flex items-center justify-center gap-2 pt-4">
                     <svg
                         className="rotate-180"
@@ -201,7 +290,7 @@ const Projects = ({ projectsRef }: ProjectsProps) => {
                         ></path>
                     </svg>
                 </div>
-            )}
+            )} */}
         </section>
     );
 };
