@@ -2,21 +2,18 @@ import Image from "next/image";
 import React, { useState } from "react";
 
 interface ProjectProps {
-    image: string;
-    title: string;
-    children: React.ReactNode;
-    link?: {
-        text: string;
-        link: string;
-        color: string;
+    project: {
+        image: string;
+        title: string;
+        content: string;
+        link?: {
+            text: string;
+            link: string;
+        };
     };
-    tech: {
-        img: string;
-        effect: boolean;
-    }[];
 }
 
-const Project = ({ image, title, children, tech, link }: ProjectProps) => {
+const Project = ({ project }: ProjectProps) => {
     const [x, setX] = useState(0);
     const [y, setY] = useState(0);
 
@@ -33,7 +30,7 @@ const Project = ({ image, title, children, tech, link }: ProjectProps) => {
             >
                 <div className="h-full w-[400px] relative">
                     <Image
-                        src={`/images${image}`}
+                        src={`${project.image}`}
                         alt="Project image"
                         fill={true}
                         className="object-cover"
@@ -41,19 +38,19 @@ const Project = ({ image, title, children, tech, link }: ProjectProps) => {
                 </div>
 
                 <div className="w-full grow">
-                    <h2 className="text-3xl font-bold">{title}</h2>
-                    {link && (
+                    <h2 className="text-3xl font-bold">{project.title}</h2>
+                    {project.link && (
                         <div className="mt-4">
                             <a
-                                href={link.link}
+                                href={project.link.link}
                                 target="_blank"
-                                className={`texl-xl xl:text-xl xl:underline xl:underline-offset-2 hover:${link.color} text-blue-300`}
+                                className={`texl-xl xl:text-xl xl:underline xl:underline-offset-2 text-blue-300 hover:text-blue-400`}
                             >
-                                {link.text}
+                                {project.link.text}
                             </a>
                         </div>
                     )}
-                    <p className="mt-6 text-xl xl:mt-12 ">{children}</p>
+                    <p className="mt-6 text-xl">{project.content}</p>
                 </div>
 
                 <div

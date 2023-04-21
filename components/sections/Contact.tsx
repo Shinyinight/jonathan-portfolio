@@ -1,6 +1,4 @@
 import { MutableRefObject } from "react";
-import { Envelope } from "phosphor-react";
-
 import ContactForm from "@/components/ContactForm";
 import contact_links from "@/data/contact";
 

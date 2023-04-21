@@ -17,7 +17,6 @@ const Home = ({ projectsRef, contactRef }: HomeProps) => {
             className="container flex flex-col items-center justify-end min-h-screen px-6 pt-24 pb-10 m-auto bg-no-repeat xl:h-screen xl:py-0 mt-22 xl:flex-row main-hero"
         >
             <div className="relative flex items-center justify-center flex-1 h-full mt-8 overflow-hidden xl:flex-1 2xl:w-96 2xl:h-96 md:w-4/5">
-                {/* <div className="relative w-56 h-56 bg-white border-8 border-white rounded-full shadow-lg xl:w-96 xl:h-96"> */}
                 <Image
                     className="shadow-lg grayscale-0"
                     alt="Jonathan Photo"
@@ -25,7 +24,6 @@ const Home = ({ projectsRef, contactRef }: HomeProps) => {
                     height={400}
                     src="/images/jonathan_photo.png"
                 />
-                {/* </div> */}
             </div>
             <div className="flex-1 xl:flex-1 ">
                 <div className="absolute left-0 z-0 w-full top-10 xl:w-14 xl:left-16">

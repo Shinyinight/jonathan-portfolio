@@ -27,7 +27,7 @@ const Skills = () => {
                         {skills.map((skill) => {
                             return (
                                 <li
-                                    className="relative flex-shrink-0"
+                                    className="relative flex-shrink-0 group"
                                     key={skill.name}
                                     data-tooltip-id="tooltip"
                                     data-tooltip-content={skill.name}
@@ -40,7 +40,7 @@ const Skills = () => {
                                     <img
                                         src={`/images/${skill.image}`}
                                         alt="logo"
-                                        className="absolute top-0 z-0 object-cover w-16 xl:w-24 blur"
+                                        className="absolute top-0 z-0 object-cover w-16 transition-opacity duration-300 opacity-0 group-hover:opacity-100 xl:w-24 blur"
                                     />
                                 </li>
                             );
