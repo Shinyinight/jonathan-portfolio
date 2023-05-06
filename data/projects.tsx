@@ -19,7 +19,7 @@ const projects = [
 		image: "/images/work_amai.png",
 		title: "Amai Takahashi - Digital sculptor Portfolio",
 		content:
-			"Digital sculptor and 3D artist portfolio showcasing all the recent designs and creations for 3D printing.",
+			"Amai Takahashi is a fantastic digital sculptor and 3D artist. This project is a portfolio webpage showcasing all the recent designs and creations for 3D printing. It is built in Next.js and it uses a local CMS to manage all the content. It is a static and very simple website that is deployed in Vercel and continuously integrated with Github, so it is very easy to update and maintain.",
 		link: {
 			text: "Amai Takahashi",
 			link: "https://amaitakahashi.com",
