@@ -9,9 +9,9 @@ export default async (req, res) => {
 		accessToken: process.env.MAILJET_ACCESSTOKEN,
 	};
 
-	await fetch('https://api.emailjs.com/api/v1.0/email/send', {
-		method: 'POST',
-		headers: { 'Content-Type': 'application/json' },
+	await fetch("https://api.emailjs.com/api/v1.0/email/send", {
+		method: "POST",
+		headers: { "Content-Type": "application/json" },
 		body: JSON.stringify(data),
 	});
 

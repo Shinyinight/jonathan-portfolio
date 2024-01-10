@@ -1,40 +1,47 @@
-import { GithubLogo, InstagramLogo, LinkedinLogo, TwitterLogo, DribbbleLogo, Envelope } from 'phosphor-react';
+import {
+	GithubLogo,
+	InstagramLogo,
+	LinkedinLogo,
+	TwitterLogo,
+	DribbbleLogo,
+	Envelope,
+} from "phosphor-react";
 
 const contact_links = [
 	{
-		name: 'Github',
+		name: "Github",
 		icon: <GithubLogo size={68} />,
-		url: 'https://github.com/jonathanfernandezfm',
+		url: "https://github.com/jonathanfernandezfm",
 		blank: true,
 	},
 	{
-		name: 'Instagram',
+		name: "Instagram",
 		icon: <InstagramLogo size={68} />,
-		url: 'https://www.instagram.com/jonathanfdez_poak/',
+		url: "https://www.instagram.com/jonathanfdez_poak/",
 		blank: true,
 	},
 	{
-		name: 'LinkedIn',
+		name: "LinkedIn",
 		icon: <LinkedinLogo size={68} />,
-		url: 'https://www.linkedin.com/in/jonathanfernandezfm/',
+		url: "https://www.linkedin.com/in/jonathanfernandezfm/",
 		blank: true,
 	},
 	{
-		name: 'Twitter',
+		name: "Twitter",
 		icon: <TwitterLogo size={68} />,
-		url: 'https://twitter.com/JonathanFdezM',
+		url: "https://twitter.com/JonathanFdezM",
 		blank: true,
 	},
 	{
-		name: 'Dribble',
+		name: "Dribble",
 		icon: <DribbbleLogo size={68} />,
-		url: 'https://dribbble.com/JonathanFM',
+		url: "https://dribbble.com/JonathanFM",
 		blank: true,
 	},
 	{
-		name: 'Email',
+		name: "Email",
 		icon: <Envelope size={68} />,
-		url: 'mailto:jonathanfernandezfm@gmail.com',
+		url: "mailto:jonathanfernandezfm@gmail.com",
 		blank: false,
 	},
 ];

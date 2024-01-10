@@ -4,7 +4,7 @@ declare module "*.svg";
 export {};
 
 declare global {
-    interface Window {
-        gtag: any;
-    }
+	interface Window {
+		gtag: any;
+	}
 }
