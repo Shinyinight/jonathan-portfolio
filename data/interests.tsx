@@ -1,10 +1,10 @@
 import {
-	GlobeHemisphereEast,
+	Alien,
 	CirclesThree,
+	Cloud,
 	Database,
 	DeviceMobile,
-	Cloud,
-	Alien
+	GlobeHemisphereEast,
 } from "phosphor-react";
 
 const interests = [

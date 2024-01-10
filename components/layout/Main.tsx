@@ -1,5 +1,5 @@
-import React from "react";
 import { Inter } from "next/font/google";
+import React from "react";
 
 interface MainProps {
 	children: React.ReactNode;

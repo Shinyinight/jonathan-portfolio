@@ -6,6 +6,7 @@ export const pageview = (url: string) => {
 	});
 };
 
+// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 export const event = ({ action, category, label, value }: any) => {
 	window.gtag("event", action, {
 		event_category: category,

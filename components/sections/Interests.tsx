@@ -10,7 +10,7 @@ const Interests = () => {
 			<h1 className="text-4xl font-bold xl:text-5xl font-rubik">Interests</h1>
 			<div className="flex flex-wrap justify-center gap-8 px-6 mt-24 xl:px-48 articles">
 				{interests.map((interest, index) => {
-					return <ArticleInterest key={index} interest={interest} />;
+					return <ArticleInterest key={interest.title} interest={interest} />;
 				})}
 			</div>
 		</section>

@@ -26,7 +26,7 @@ const ArticleInterest = ({ interest }) => {
 					style={{
 						transform: `translate(${x}px, ${y}px)`,
 					}}
-				></div>
+				/>
 			</div>
 		</article>
 	);

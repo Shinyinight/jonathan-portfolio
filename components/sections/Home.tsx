@@ -1,15 +1,15 @@
 import Image from "next/image";
-import { MutableRefObject } from "react";
+import { MutableRefObject, RefObject } from "react";
 import Button from "../Button";
 
 interface HomeProps {
-	projectsRef: MutableRefObject<any>;
-	contactRef: MutableRefObject<any>;
+	projectsRef: RefObject<HTMLElement>;
+	contactRef: RefObject<HTMLElement>;
 }
 
 const Home = ({ projectsRef, contactRef }: HomeProps) => {
-	const scrollTo = (ref: MutableRefObject<any>) =>
-		ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
+	const scrollTo = (ref: RefObject<HTMLElement>) =>
+		ref.current?.scrollIntoView({ behavior: "smooth", block: "start" });
 
 	return (
 		<section

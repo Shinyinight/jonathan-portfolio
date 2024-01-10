@@ -38,6 +38,7 @@ const BackToTop = () => {
 			timeout={1000}
 		>
 			<button
+				type="button"
 				onClick={() => {
 					window.scrollTo({ top: 0, behavior: "smooth" });
 				}}

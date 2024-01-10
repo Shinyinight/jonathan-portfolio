@@ -1,10 +1,10 @@
-import { MutableRefObject } from "react";
 import ContactForm from "@/components/ContactForm";
 import contact_links from "@/data/contact";
+import { MutableRefObject, RefObject } from "react";
 
 interface ContactProps {
-	contactRef: MutableRefObject<any>;
-	contactFormRef: MutableRefObject<any>;
+	contactRef: RefObject<HTMLInputElement>;
+	contactFormRef: RefObject<HTMLInputElement>;
 }
 
 const Contact = ({ contactRef, contactFormRef }: ContactProps) => {

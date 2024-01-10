@@ -1,10 +1,10 @@
-import { MutableRefObject } from "react";
+import { MutableRefObject, RefObject } from "react";
 import Project from "../Project";
 
 import projects from "@/data/projects";
 
 interface ProjectsProps {
-	projectsRef: MutableRefObject<any>;
+	projectsRef: RefObject<HTMLElement>;
 }
 
 const Projects = ({ projectsRef }: ProjectsProps) => {
@@ -19,7 +19,7 @@ const Projects = ({ projectsRef }: ProjectsProps) => {
 				</h1>
 				<div className="flex flex-col gap-6 mx-6 mt-24 xl:mx-40">
 					{projects.map((project, index) => {
-						return <Project key={index} project={project}></Project>;
+						return <Project key={project.title} project={project} />;
 					})}
 				</div>
 			</div>

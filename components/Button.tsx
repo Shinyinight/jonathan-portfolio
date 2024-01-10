@@ -1,6 +1,7 @@
 const Button = ({ variant, children, ...props }) => {
 	return (
 		<button
+			type="button"
 			{...props}
 			className={`px-10 py-2 text-lg xl:text-2xl ${
 				variant === "primary"

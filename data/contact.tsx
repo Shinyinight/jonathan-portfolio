@@ -1,10 +1,10 @@
 import {
+	DribbbleLogo,
+	Envelope,
 	GithubLogo,
 	InstagramLogo,
 	LinkedinLogo,
 	TwitterLogo,
-	DribbbleLogo,
-	Envelope,
 } from "phosphor-react";
 
 const contact_links = [

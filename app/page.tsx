@@ -1,21 +1,20 @@
 "use client";
 
-import Head from "next/head";
-import { useEffect, useRef, useState } from "react";
-import { Tooltip as ReactTooltip } from "react-tooltip";
+import BackToTop from "@/components/BackToTop";
+import Footer from "@/components/layout/Footer";
+import Main from "@/components/layout/Main";
+import Contact from "@/components/sections/Contact";
 import Home from "@/components/sections/Home";
-import Skills from "@/components/sections/Skills";
 import Interests from "@/components/sections/Interests";
 import Projects from "@/components/sections/Projects";
-import Contact from "@/components/sections/Contact";
-import Footer from "@/components/layout/Footer";
-import BackToTop from "@/components/BackToTop";
-import Main from "@/components/layout/Main";
+import Skills from "@/components/sections/Skills";
+import { useRef } from "react";
+import { Tooltip as ReactTooltip } from "react-tooltip";
 
 export default function Page() {
-	const contactRef = useRef(null);
-	const contactFormRef = useRef(null);
-	const projectsRef = useRef(null);
+	const contactRef = useRef<HTMLInputElement>(null);
+	const contactFormRef = useRef<HTMLInputElement>(null);
+	const projectsRef = useRef<HTMLInputElement>(null);
 
 	return (
 		<Main>

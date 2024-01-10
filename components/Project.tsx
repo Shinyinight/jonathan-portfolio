@@ -44,7 +44,10 @@ const Project = ({ project }: ProjectProps) => {
 							<a
 								href={project.link.link}
 								target="_blank"
-								className={`texl-xl underline underline-offset-2 text-blue-300 hover:text-blue-400`}
+								className={
+									"texl-xl underline underline-offset-2 text-blue-300 hover:text-blue-400"
+								}
+								rel="noreferrer"
 							>
 								{project.link.text}
 							</a>
@@ -58,7 +61,7 @@ const Project = ({ project }: ProjectProps) => {
 					style={{
 						transform: `translate(${x}px, ${y}px)`,
 					}}
-				></div>
+				/>
 			</div>
 		</article>
 	);
