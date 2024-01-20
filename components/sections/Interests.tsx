@@ -19,7 +19,7 @@ const Interests = () => {
 					</h1>
 				</div>
 			</div>
-			<div className="grid grid-cols-1 gap-6 px-4 mt-24 md:grid-cols-2 xl:px-48 articles md:px-0">
+			<div className="grid grid-cols-1 gap-6 mx-6 mt-24 md:grid-cols-2 xl:px-48 articles md:px-0">
 				{interests.map((interest, i) => (
 					<ArticleInterest
 						className={`row-span-1

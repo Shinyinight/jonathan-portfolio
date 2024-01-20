@@ -27,7 +27,7 @@ const ContactForm = () => {
 
 	return (
 		<form
-			className="flex flex-col items-center gap-6 mt-24 xl:mx-auto xl:w-[900px] px-6 md:px-0"
+			className="flex flex-col items-center gap-6 mt-24 xl:mx-auto xl:w-[900px] mx-6 md:px-0"
 			onSubmit={sendEmail}
 		>
 			<input type="hidden" name="contact_number" />
