@@ -10,7 +10,7 @@ const Home = () => {
 	return (
 		<section className="container flex flex-col items-center justify-end min-h-screen px-6 pt-24 pb-10 m-auto bg-no-repeat xl:gap-10 xl:h-screen xl:py-0 mt-22 xl:flex-row main-hero">
 			<div className="image-hero relative flex items-center justify-center flex-1 h-full mt-8 overflow-hidden xl:flex-1 2xl:w-96 2xl:h-[650px] md:w-4/5">
-				<Fade>
+				<Fade triggerOnce>
 					<Image
 						className="shadow-lg grayscale-0 xl:w-[600px] w-[250px]"
 						alt="Jonathan Photo"
@@ -26,8 +26,8 @@ const Home = () => {
 						<Image fill={true} src="/images/logo.svg" alt="Logo portfolio" />
 					</div>
 				</div>
-				<Fade>
-					<Slide duration={1000} direction="right">
+				<Fade triggerOnce>
+					<Slide triggerOnce duration={1000} direction="right">
 						<h1
 							className={`${dmSerifDisplay.className} mt-8 text-4xl text-center md:text-6xl xl:mt-0 xl:text-7xl xl:text-left`}
 						>
@@ -66,7 +66,7 @@ const Home = () => {
 						</div>
 					</Slide>
 				</Fade>
-				<Fade delay={1000}>
+				<Fade triggerOnce delay={1000}>
 					<div className="flex justify-center gap-4 xl:gap-8 xl:justify-start my-14 xl:my-0 xl:mt-12 buttons">
 						<Button variant={"primary"} idToScroll="projects">
 							Projects
