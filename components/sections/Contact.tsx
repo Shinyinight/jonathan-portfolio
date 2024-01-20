@@ -1,20 +1,14 @@
-import ContactForm from "@/components/ContactForm";
+import ContactForm from "@/components/client/ContactForm";
 import contact_links from "@/data/contact";
 import { DM_Serif_Display } from "next/font/google";
-import { RefObject } from "react";
-
-interface ContactProps {
-	contactRef: RefObject<HTMLInputElement>;
-	contactFormRef: RefObject<HTMLInputElement>;
-}
 
 const dmSerifDisplay = DM_Serif_Display({ weight: "400", subsets: ["latin"] });
 
-const Contact = ({ contactRef, contactFormRef }: ContactProps) => {
+const Contact = () => {
 	return (
 		<section
-			ref={contactRef}
-			className="container flex flex-col justify-center min-h-screen py-16 m-auto text-center xl:pb-40 w-fit"
+			id="contact"
+			className="container flex flex-col justify-center min-h-screen py-16 m-auto text-center xl:pb-40"
 		>
 			<div className="flex justify-center">
 				<div className="relative z-10 title-brush">
@@ -40,7 +34,7 @@ const Contact = ({ contactRef, contactFormRef }: ContactProps) => {
 					);
 				})}
 			</div>
-			<ContactForm contactFormRef={contactFormRef} />
+			<ContactForm />
 		</section>
 	);
 };

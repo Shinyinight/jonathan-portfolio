@@ -1,19 +1,14 @@
-import { MutableRefObject, RefObject } from "react";
-import Project from "../Project";
+import Project from "../client/Project";
 
 import projects from "@/data/projects";
 import { DM_Serif_Display } from "next/font/google";
 
-interface ProjectsProps {
-	projectsRef: RefObject<HTMLElement>;
-}
-
 const dmSerifDisplay = DM_Serif_Display({ weight: "400", subsets: ["latin"] });
 
-const Projects = ({ projectsRef }: ProjectsProps) => {
+const Projects = () => {
 	return (
 		<section
-			ref={projectsRef}
+			id="projects"
 			className="relative min-h-screen py-16 xl:py-40 projects bg-dark"
 		>
 			<div className="container m-auto">

@@ -1,19 +1,16 @@
+import { DM_Serif_Display } from "next/font/google";
 import Image from "next/image";
-import { MutableRefObject, RefObject } from "react";
-import Button from "../Button";
-import { DM_Serif_Display, Dosis } from "next/font/google";
+import { RefObject } from "react";
+import Button from "../client/Button";
 
 interface HomeProps {
-	projectsRef: RefObject<HTMLElement>;
-	contactRef: RefObject<HTMLElement>;
+	projectsRef?: RefObject<HTMLElement>;
+	contactRef?: RefObject<HTMLElement>;
 }
 
 const dmSerifDisplay = DM_Serif_Display({ weight: "400", subsets: ["latin"] });
 
 const Home = ({ projectsRef, contactRef }: HomeProps) => {
-	const scrollTo = (ref: RefObject<HTMLElement>) =>
-		ref.current?.scrollIntoView({ behavior: "smooth", block: "start" });
-
 	return (
 		<section
 			id="home"
@@ -31,7 +28,7 @@ const Home = ({ projectsRef, contactRef }: HomeProps) => {
 			<div className="flex-1 xl:flex-1">
 				<div className="absolute left-0 z-0 w-full top-10 xl:w-14 xl:left-16">
 					<div className="relative mx-auto w-14 h-14">
-						<Image fill={true} src="/images/logo.svg" alt="logo portfolio" />
+						<Image fill={true} src="/images/logo.svg" alt="Logo portfolio" />
 					</div>
 				</div>
 				<h1
@@ -43,13 +40,13 @@ const Home = ({ projectsRef, contactRef }: HomeProps) => {
 					Information Systems Engineer, Full Stack Developer and web enthusiast
 					from Spain looking for new challenges and horizons.
 				</p>
-				<p className="px-12 mt-6 text-lg leading-snug text-center text-md md:text-2xl xl:text-left xl:px-0 xl:text-2xl 2xl:text-3xl">
+				<p className="px-12 mt-6 text-lg leading-snug text-center group text-md md:text-2xl xl:text-left xl:px-0 xl:text-2xl 2xl:text-3xl">
 					Currently based in{" "}
-					<span className="hover:text-transparent bg-clip-text hover:bg-gradient-to-r from-blue-500 to-blue-100">
+					<span className="group-hover:text-transparent bg-clip-text group-hover:bg-gradient-to-r from-cyan-500 to-blue-100">
 						Kuopio
 					</span>
 					,{" "}
-					<span className="hover:text-transparent bg-clip-text hover:bg-gradient-to-r from-blue-100 to-blue-500">
+					<span className="group-hover:text-transparent bg-clip-text group-hover:bg-gradient-to-r from-blue-100 to-cyan-500">
 						Finland
 					</span>{" "}
 					and working at
@@ -64,20 +61,10 @@ const Home = ({ projectsRef, contactRef }: HomeProps) => {
 					</a>
 				</p>
 				<div className="flex justify-center gap-4 xl:gap-8 xl:justify-start my-14 xl:my-0 xl:mt-12 buttons">
-					<Button
-						variant={"primary"}
-						onClick={() => {
-							scrollTo(projectsRef);
-						}}
-					>
+					<Button variant={"primary"} idToScroll="projects">
 						Projects
 					</Button>
-					<Button
-						variant={"secondary"}
-						onClick={() => {
-							scrollTo(contactRef);
-						}}
-					>
+					<Button variant={"secondary"} idToScroll="contact">
 						Contact
 					</Button>
 				</div>

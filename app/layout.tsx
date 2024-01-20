@@ -2,8 +2,6 @@ import { siteConfig } from "@/config/site";
 import * as gtag from "@/lib/gtag";
 import "@/styles/globals.css";
 import { Analytics } from "@vercel/analytics/react";
-import Head from "next/head";
-import Script from "next/script";
 
 interface RootLayoutProps {
 	children: React.ReactNode;

@@ -1,6 +1,6 @@
 import interests from "@/data/interests";
-import ArticleInterest from "../ArticleInterest";
 import { DM_Serif_Display } from "next/font/google";
+import ArticleInterest from "../client/ArticleInterest";
 
 const dmSerifDisplay = DM_Serif_Display({ weight: "400", subsets: ["latin"] });
 

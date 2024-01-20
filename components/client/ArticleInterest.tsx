@@ -1,3 +1,5 @@
+"use client";
+
 import { Interest } from "@/models/Interest";
 import { DM_Serif_Display } from "next/font/google";
 import React, { ComponentProps, ReactPropTypes, useState } from "react";

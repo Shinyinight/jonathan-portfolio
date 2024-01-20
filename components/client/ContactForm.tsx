@@ -1,11 +1,9 @@
-import { RefObject, useState } from "react";
+"use client";
+
+import { useState } from "react";
 import Button from "./Button";
 
-interface ContactFormProps {
-	contactFormRef: RefObject<HTMLInputElement>;
-}
-
-const ContactForm = ({ contactFormRef }: ContactFormProps) => {
+const ContactForm = () => {
 	const [loading, setLoading] = useState(false);
 
 	const sendEmail = async (e) => {
@@ -29,14 +27,13 @@ const ContactForm = ({ contactFormRef }: ContactFormProps) => {
 
 	return (
 		<form
-			className="flex flex-col items-center gap-6 mx-6 mt-24 xl:mx-0 contact-form"
+			className="flex flex-col items-center gap-6 mt-24 xl:mx-auto xl:w-[900px]"
 			onSubmit={sendEmail}
 		>
 			<input type="hidden" name="contact_number" />
 			<div className="flex flex-col items-start justify-start w-full gap-2 row">
 				<label className="text-md">Name</label>
 				<input
-					ref={contactFormRef}
 					placeholder="John Doe"
 					className="w-full px-4 py-2 border-[1px] rounded border-neutral-700 bg-dark focus:outline-none focus:ring-2 focus:ring-neutral-800 focus:border-transparent hover:bg-neutral-900 bg-neutral-950"
 					type="text"

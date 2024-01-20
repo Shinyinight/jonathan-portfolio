@@ -34,12 +34,12 @@ const Skills = () => {
 								>
 									<img
 										src={`/images/${skill.image}`}
-										alt="logo"
+										alt={`${skill.name} logo`}
 										className="relative z-10 object-cover w-16 xl:w-20"
 									/>
 									<img
 										src={`/images/${skill.image}`}
-										alt="logo"
+										alt={`${skill.name} logo blurred`}
 										className="absolute top-0 z-0 object-cover w-16 transition-opacity duration-300 opacity-0 group-hover:opacity-100 xl:w-20 blur"
 									/>
 								</li>
@@ -57,12 +57,12 @@ const Skills = () => {
 								>
 									<img
 										src={`/images/${skill.image}`}
-										alt="logo"
+										alt={`${skill.name} logo`}
 										className="relative z-10 object-cover w-16 xl:w-24"
 									/>
 									<img
 										src={`/images/${skill.image}`}
-										alt="logo"
+										alt={`${skill.name} logo blurred`}
 										className="absolute top-0 z-0 object-cover w-16 transition-opacity duration-300 opacity-0 group-hover:opacity-100 xl:w-24 blur"
 									/>
 								</li>

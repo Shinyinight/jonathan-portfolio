@@ -4,6 +4,7 @@
 @import '../styles/index.css';
 @import '../styles/animations.css';
 @import 'react-tooltip/dist/react-tooltip.css';
+/* @import '../node_modules/sal.js/dist/sal.css'; */
 
 html,
 body {
