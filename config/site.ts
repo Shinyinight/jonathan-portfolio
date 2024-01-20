@@ -1,10 +1,10 @@
 export const siteConfig = {
-	name: ">jfm | Jonathan Fernández Mertanen",
-	description: "TBD",
-	url: "TBD",
-	ogImage: "TBD",
-	links: {
-		twitter: "TBD",
-		github: "TBD",
-	},
+  name: ">jfm | Jonathan Fernández Mertanen",
+  description: "Jonathan Fernández Mertanen's personal website",
+  url: "https://jonathanfernandezfm.com/",
+  ogImage: "https://jonathanfernandezfm.com/images/jonathan_photo.png",
+  links: {
+    twitter: "https://twitter.com/JonathanFdezM",
+    github: "https://github.com/jonathanfernandezfm",
+  },
 };

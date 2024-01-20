@@ -2,12 +2,13 @@ import { siteConfig } from "@/config/site";
 import * as gtag from "@/lib/gtag";
 import "@/styles/globals.css";
 import { Analytics } from "@vercel/analytics/react";
+import { Metadata } from "next";
 
 interface RootLayoutProps {
 	children: React.ReactNode;
 }
 
-export const metadata = {
+export const metadata: Metadata = {
 	title: {
 		default: siteConfig.name,
 		template: `%s | ${siteConfig.name}`,
@@ -16,18 +17,12 @@ export const metadata = {
 	keywords: ["Next.js", "React", "Tailwind CSS", "Server Components", "TBD"],
 	authors: [
 		{
-			name: "TBD",
-			url: "TBD",
+			name: "Jonathan Fernández Mertanen",
+			url: "https://jonathanfernandezfm.com/",
 		},
 	],
-	creator: "TBD",
+	creator: "Jonathan Fernández Mertanen",
 	metadataBase: new URL("https://jonathanfernandezfm.com/"),
-	visualViewport: {
-		themeColor: [
-			{ media: "(prefers-color-scheme: light)", color: "white" },
-			{ media: "(prefers-color-scheme: dark)", color: "black" },
-		],
-	},
 	openGraph: {
 		type: "website",
 		locale: "en_US",
