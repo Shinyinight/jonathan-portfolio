@@ -21,3 +21,43 @@
 	opacity: 0;
 	transition: all 0.5s ease;
 }
+
+.carrousel-1 {
+	animation: carrousel 15s linear infinite;
+}
+
+.carrousel-2 {
+	animation: carrousel-2 15s linear infinite;
+	animation-direction: alternate-reverse;
+	transform: translateX(-330px);
+}
+
+@keyframes carrousel {
+	5% {
+		transform: translateX(0);
+	}
+	48% {
+		transform: translateX(-330px);
+	}
+	52% {
+		transform: translateX(-330px);
+	}
+	95% {
+		transform: translateX(0);
+	}
+}
+
+@keyframes carrousel-2 {
+	5% {
+		transform: translateX(-330px);
+	}
+	48% {
+		transform: translateX(0);
+	}
+	52% {
+		transform: translateX(0);
+	}
+	95% {
+		transform: translateX(-330px);
+	}
+}

@@ -1,6 +1,12 @@
-import React, { useState } from "react";
+import { Interest } from "@/models/Interest";
+import { DM_Serif_Display } from "next/font/google";
+import React, { ComponentProps, ReactPropTypes, useState } from "react";
 
-const ArticleInterest = ({ interest }) => {
+const dmSerifDisplay = DM_Serif_Display({ weight: "400", subsets: ["latin"] });
+
+const ArticleInterest = (
+	props: ComponentProps<"div"> & { interest: Interest; index: number },
+) => {
 	const [x, setX] = useState(0);
 	const [y, setY] = useState(0);
 
@@ -11,22 +17,24 @@ const ArticleInterest = ({ interest }) => {
 
 	return (
 		<article
-			key={interest.title}
-			className="group z-10 relative border-[1px] rounded shadow-lg hover:shadow-xl card border-neutral-700 bg-neutral-950 overflow-hidden"
+			key={props.interest.title}
+			className={`group w-full relative border-[1px] rounded shadow-lg hover:shadow-xl card border-neutral-700 bg-neutral-950 overflow-hidden ${props.className}`}
 		>
 			<div
-				className="flex flex-col items-center justify-center h-full p-12 align-middle"
+				className="z-0 interest-bg"
+				style={{
+					backgroundImage: `url('/images/bg${props.index}.jpg')`,
+				}}
+			/>
+			<div
+				className="relative z-10 flex flex-col items-center justify-center h-full p-12 align-middle pointer-events-none"
 				onMouseMove={(e) => setHoverBackgroundPosition(e)}
 			>
-				<div>{interest.icon}</div>
-				<h2 className="mt-4 text-2xl font-bold ">{interest.title}</h2>
-				<p className="mt-6 text-lg ">{interest.text}</p>
-				<div
-					className="absolute top-0 left-0 transition-colors duration-300 rounded-full group-hover:bg-red-600 w-[300px] h-[300px] blur-3xl -z-10 opacity-10 bg-none"
-					style={{
-						transform: `translate(${x}px, ${y}px)`,
-					}}
-				/>
+				<div>{props.interest.icon}</div>
+				<h2 className={`${dmSerifDisplay.className} mt-4 text-2xl font-bold`}>
+					{props.interest.title}
+				</h2>
+				<p className="mt-6 text-xl">{props.interest.text}</p>
 			</div>
 		</article>
 	);

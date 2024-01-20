@@ -1,5 +1,8 @@
 import interests from "@/data/interests";
 import ArticleInterest from "../ArticleInterest";
+import { DM_Serif_Display } from "next/font/google";
+
+const dmSerifDisplay = DM_Serif_Display({ weight: "400", subsets: ["latin"] });
 
 const Interests = () => {
 	return (
@@ -7,11 +10,27 @@ const Interests = () => {
 			id="interests"
 			className="container py-16 m-auto text-center xl:py-40 interests"
 		>
-			<h1 className="text-4xl font-bold xl:text-5xl font-rubik">Interests</h1>
-			<div className="flex flex-wrap justify-center gap-8 px-6 mt-24 xl:px-48 articles">
-				{interests.map((interest, index) => {
-					return <ArticleInterest key={interest.title} interest={interest} />;
-				})}
+			<div className="flex justify-center">
+				<div className="relative z-10 title-brush">
+					<h1
+						className={`${dmSerifDisplay.className} text-5xl font-bold xl:text-5xl`}
+					>
+						Interests
+					</h1>
+				</div>
+			</div>
+			<div className="grid grid-cols-2 gap-6 mt-24 xl:px-48 articles">
+				{interests.map((interest, i) => (
+					<ArticleInterest
+						className={`row-span-1
+              ${i === 3 || i === 6 ? "col-span-2" : ""}
+              ${i === 1 ? "row-span-2" : ""}
+            `}
+						key={interest.title}
+						interest={interest}
+						index={i}
+					/>
+				))}
 			</div>
 		</section>
 	);

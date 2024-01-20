@@ -1,20 +1,31 @@
 import ContactForm from "@/components/ContactForm";
 import contact_links from "@/data/contact";
-import { MutableRefObject, RefObject } from "react";
+import { DM_Serif_Display } from "next/font/google";
+import { RefObject } from "react";
 
 interface ContactProps {
 	contactRef: RefObject<HTMLInputElement>;
 	contactFormRef: RefObject<HTMLInputElement>;
 }
 
+const dmSerifDisplay = DM_Serif_Display({ weight: "400", subsets: ["latin"] });
+
 const Contact = ({ contactRef, contactFormRef }: ContactProps) => {
 	return (
 		<section
 			ref={contactRef}
-			className="container flex flex-col justify-center min-h-screen py-16 m-auto text-center xl:pb-40 contact w-fit"
+			className="container flex flex-col justify-center min-h-screen py-16 m-auto text-center xl:pb-40 w-fit"
 		>
-			<h1 className="text-4xl font-bold xl:text-5xl font-rubik">Contact</h1>
-			<div className="flex flex-wrap justify-center gap-4 px-4 mt-24 xl:px-0 xl:gap-16 contact-links">
+			<div className="flex justify-center">
+				<div className="relative z-10 title-brush">
+					<h1
+						className={`${dmSerifDisplay.className} text-5xl font-bold text-center xl:text-5xl`}
+					>
+						Contact
+					</h1>
+				</div>
+			</div>{" "}
+			<div className="flex flex-wrap justify-center gap-4 px-4 mt-24 xl:px-0 xl:gap-10">
 				{contact_links.map((link) => {
 					return (
 						<a
@@ -23,7 +34,6 @@ const Contact = ({ contactRef, contactFormRef }: ContactProps) => {
 							data-tooltip-content={link.name}
 							href={link.url}
 							target={link.blank ? "_blank" : ""}
-							className="p-2 border-[1px] rounded border-neutral-700 hover:bg-neutral-900 bg-neutral-950 focus:outline-none focus:ring-4 focus:ring-neutral-800 focus:border-transparent"
 						>
 							{link.icon}
 						</a>

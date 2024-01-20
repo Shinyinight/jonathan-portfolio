@@ -16,9 +16,6 @@ const skills = [
 	{ name: "Git", image: "git.png" },
 	{ name: "Google Cloud", image: "google-cloud.png" },
 	{ name: "Databases", image: "database.png" },
-	{ name: "Bash & Linux", image: "bash.png" },
-	{ name: "Photoshop", image: "photoshop.png" },
-	{ name: "AdobeXD", image: "adobexd.png" },
 ];
 
 export default skills;

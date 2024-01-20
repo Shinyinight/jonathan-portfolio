@@ -2,10 +2,13 @@ import { MutableRefObject, RefObject } from "react";
 import Project from "../Project";
 
 import projects from "@/data/projects";
+import { DM_Serif_Display } from "next/font/google";
 
 interface ProjectsProps {
 	projectsRef: RefObject<HTMLElement>;
 }
+
+const dmSerifDisplay = DM_Serif_Display({ weight: "400", subsets: ["latin"] });
 
 const Projects = ({ projectsRef }: ProjectsProps) => {
 	return (
@@ -14,9 +17,15 @@ const Projects = ({ projectsRef }: ProjectsProps) => {
 			className="relative min-h-screen py-16 xl:py-40 projects bg-dark"
 		>
 			<div className="container m-auto">
-				<h1 className="text-4xl font-bold text-center xl:text-5xl font-rubik">
-					Projects
-				</h1>
+				<div className="flex justify-center">
+					<div className="relative z-10 title-brush">
+						<h1
+							className={`${dmSerifDisplay.className} text-5xl font-bold text-center xl:text-5xl`}
+						>
+							Projects / Work
+						</h1>
+					</div>
+				</div>
 				<div className="flex flex-col gap-6 mx-6 mt-24 xl:mx-40">
 					{projects.map((project, index) => {
 						return <Project key={project.title} project={project} />;
