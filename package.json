@@ -10,9 +10,9 @@
 		"dev": "next dev",
 		"build": "next build",
 		"start": "next start",
-    "lint": "npx @biomejs/biome lint app components config data hooks lib pages public styles",
-    "check": "npx @biomejs/biome check --apply app components config data hooks lib pages public styles",
-    "format": "npx @biomejs/biome format --write app components config data hooks lib pages public styles"
+		"lint": "npx @biomejs/biome lint app components config data hooks lib pages public styles",
+		"check": "npx @biomejs/biome check --apply app components config data hooks lib pages public styles",
+		"format": "npx @biomejs/biome format --write app components config data hooks lib pages public styles"
 	},
 	"dependencies": {
 		"@types/react-dom": "^18.2.18",
@@ -32,7 +32,6 @@
 		"@types/node": "^14.14.31",
 		"@types/react": "^18.2.47",
 		"autoprefixer": "^10.4.16",
-		"eslint-config-next": "^14.0.4",
 		"postcss": "^8.4.33",
 		"tailwindcss": "^3.4.1",
 		"typescript": "^5.0.4"
