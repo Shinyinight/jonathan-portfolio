@@ -3,6 +3,7 @@ import * as gtag from "@/lib/gtag";
 import "@/styles/globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import { Metadata } from "next";
+import Script from "next/script";
 
 interface RootLayoutProps {
 	children: React.ReactNode;
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
 		template: `%s | ${siteConfig.name}`,
 	},
 	description: siteConfig.description,
-	keywords: ["Next.js", "React", "Tailwind CSS", "Server Components", "TBD"],
+	keywords: ["Next.js", "React", "Tailwind CSS", "Server Components"],
 	authors: [
 		{
 			name: "Jonathan Fernández Mertanen",
@@ -35,13 +36,13 @@ export const metadata: Metadata = {
 		card: "summary_large_image",
 		title: siteConfig.name,
 		description: siteConfig.description,
-		images: [`${siteConfig.url}/og.jpg`],
-		creator: "TBD",
+		images: [`${siteConfig.ogImage}`],
+		creator: "Jonathan Fernández Mertanen",
 	},
 	icons: {
 		icon: "/favicon.ico",
 		shortcut: "/favicon-16x16.png",
-		apple: "/apple-touch-icon.png",
+		apple: "/favicon-16x16.png",
 	},
 	manifest: "",
 };
@@ -49,10 +50,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: RootLayoutProps) {
 	return (
 		<html lang="en">
-			{/* <Head>
-				<script
-					dangerouslySetInnerHTML={{
-						__html: `
+			<script
+				// biome-ignore lint/security/noDangerouslySetInnerHtml: <explanation>
+				dangerouslySetInnerHTML={{
+					__html: `
                             window.dataLayer = window.dataLayer || [];
                             function gtag(){dataLayer.push(arguments);}
                             gtag('js', new Date());
@@ -60,13 +61,12 @@ export default function RootLayout({ children }: RootLayoutProps) {
                                 page_path: window.location.pathname,
                             });
                         `,
-					}}
-				/>
-				<Script
-					strategy="afterInteractive"
-					src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
-				/>
-			</Head> */}
+				}}
+			/>
+			<Script
+				strategy="afterInteractive"
+				src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
+			/>
 			<body>
 				{children}
 				<Analytics />
