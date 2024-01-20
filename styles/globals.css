@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import '../styles/index.css';
 @import '../styles/animations.css';
 
 html,
@@ -59,17 +58,16 @@ input:-webkit-autofill:active {
 	background: #222;
 }
 
-.image-hero {
-	mask-image: url('../public/images/texture.png');
-	mask-size: 630px;
-	mask-position: center;
-	mask-repeat: no-repeat;
+.bg-dark {
+  background-color: #060606;
 }
 
-@media (max-width: 1280px) {
-  .image-hero {
-    mask-size: 270px;
-  }
+.blur {
+  -webkit-filter: blur(20px);
+  -moz-filter: blur(20px);
+  -o-filter: blur(20px);
+  -ms-filter: blur(20px);
+  filter: blur(8px);
 }
 
 .title-brush:hover::before {

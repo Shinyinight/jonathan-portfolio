@@ -1,5 +1,6 @@
 import skills from "@/data/skills";
 import { DM_Serif_Display } from "next/font/google";
+import { Fade } from "@/lib/animations";
 
 const dmSerifDisplay = DM_Serif_Display({ weight: "400", subsets: ["latin"] });
 
@@ -12,11 +13,13 @@ const Skills = () => {
 			<div className="container m-auto">
 				<div className="flex justify-center">
 					<div className="relative z-10 title-brush">
-						<h1
-							className={`${dmSerifDisplay.className} text-5xl font-bold xl:text-5xl`}
-						>
-							My skills
-						</h1>
+						<Fade>
+							<h1
+								className={`${dmSerifDisplay.className} text-5xl font-bold xl:text-5xl`}
+							>
+								My skills
+							</h1>
+						</Fade>
 					</div>
 				</div>
 				<p className="px-8 mt-16 text-xl xl:text-3xl">

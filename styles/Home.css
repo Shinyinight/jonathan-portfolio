@@ -1,0 +1,12 @@
+.image-hero {
+	mask-image: url('../public/images/texture.png');
+	mask-size: 630px;
+	mask-position: center;
+	mask-repeat: no-repeat;
+}
+
+@media (max-width: 1280px) {
+  .image-hero {
+    mask-size: 270px;
+  }
+}
