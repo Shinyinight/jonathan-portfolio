@@ -6,7 +6,7 @@ const Footer = () => {
 				<p className="mt-6 xl:mt-0">
 					Copyright © {new Date().getFullYear()} Jonathan Fernández Mertanen
 				</p>
-				<p className="mt-6 text-right xl:mt-2">
+				<p className="mt-6 text-center xl:text-right xl:mt-2">
 					<a
 						href="https://github.com/jonathanfernandezfm/portfolio-v2"
 						target="_blank"

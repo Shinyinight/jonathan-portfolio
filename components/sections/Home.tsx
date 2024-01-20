@@ -1,22 +1,16 @@
 import { DM_Serif_Display } from "next/font/google";
 import Image from "next/image";
-import { RefObject } from "react";
 import Button from "../client/Button";
-
-interface HomeProps {
-	projectsRef?: RefObject<HTMLElement>;
-	contactRef?: RefObject<HTMLElement>;
-}
 
 const dmSerifDisplay = DM_Serif_Display({ weight: "400", subsets: ["latin"] });
 
-const Home = ({ projectsRef, contactRef }: HomeProps) => {
+const Home = () => {
 	return (
 		<section
 			id="home"
-			className="container flex flex-col items-center justify-end min-h-screen gap-10 px-6 pt-24 pb-10 m-auto bg-no-repeat xl:h-screen xl:py-0 mt-22 xl:flex-row main-hero"
+			className="container flex flex-col items-center justify-end min-h-screen px-6 pt-24 pb-10 m-auto bg-no-repeat xl:gap-10 xl:h-screen xl:py-0 mt-22 xl:flex-row main-hero"
 		>
-			<div className="relative flex items-center justify-center flex-1 h-full mt-8 overflow-hidden image-hero xl:flex-1 2xl:w-96 2xl:h-[650px] md:w-4/5">
+			<div className="image-hero relative flex items-center justify-center flex-1 h-full mt-8 overflow-hidden xl:flex-1 2xl:w-96 2xl:h-[650px] md:w-4/5">
 				<Image
 					className="shadow-lg grayscale-0 xl:w-[600px] w-[250px]"
 					alt="Jonathan Photo"
@@ -51,7 +45,7 @@ const Home = ({ projectsRef, contactRef }: HomeProps) => {
 					</span>{" "}
 					and working at
 				</p>
-				<p className="flex mt-4">
+				<p className="flex justify-center mt-4 xl:justify-start">
 					<a href="https://www.efecte.com/" target="_blank" rel="noreferrer">
 						<img
 							alt="Efecte logo"

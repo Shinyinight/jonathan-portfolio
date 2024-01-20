@@ -19,12 +19,12 @@ const Interests = () => {
 					</h1>
 				</div>
 			</div>
-			<div className="grid grid-cols-2 gap-6 mt-24 xl:px-48 articles">
+			<div className="grid grid-cols-1 gap-6 px-4 mt-24 md:grid-cols-2 xl:px-48 articles md:px-0">
 				{interests.map((interest, i) => (
 					<ArticleInterest
 						className={`row-span-1
-              ${i === 3 || i === 6 ? "col-span-2" : ""}
-              ${i === 1 ? "row-span-2" : ""}
+              ${i === 3 || i === 6 ? "col-span-1 md:col-span-2" : ""}
+              ${i === 1 ? "row-span-1 md:row-span-2" : ""}
             `}
 						key={interest.title}
 						interest={interest}

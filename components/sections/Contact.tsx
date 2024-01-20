@@ -18,8 +18,8 @@ const Contact = () => {
 						Contact
 					</h1>
 				</div>
-			</div>{" "}
-			<div className="flex flex-wrap justify-center gap-4 px-4 mt-24 xl:px-0 xl:gap-10">
+			</div>
+			<div className="flex flex-wrap justify-center gap-4 px-10 mt-24 xl:px-0 xl:gap-10">
 				{contact_links.map((link) => {
 					return (
 						<a
