@@ -1,6 +1,5 @@
 "use client";
 
-import { ArrowSquareUp } from "phosphor-react";
 import { useEffect, useState } from "react";
 import { CSSTransition } from "react-transition-group";
 
@@ -46,7 +45,22 @@ const BackToTop = () => {
 				}}
 				className="fixed z-20 bottom-8 right-8"
 			>
-				<ArrowSquareUp size={48} />
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					width="48"
+					height="48"
+					viewBox="0 0 24 24"
+				>
+					<title>Arrow up</title>
+					<path
+						fill="none"
+						stroke="currentColor"
+						strokeLinecap="round"
+						strokeLinejoin="round"
+						strokeWidth="1"
+						d="M12 5v14m4-10l-4-4M8 9l4-4"
+					/>
+				</svg>
 			</button>
 		</CSSTransition>
 	);

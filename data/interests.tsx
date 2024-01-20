@@ -1,12 +1,4 @@
 import { Interest } from "@/models/Interest";
-import {
-	Alien,
-	CirclesThree,
-	Cloud,
-	Database,
-	DeviceMobile,
-	GlobeHemisphereEast,
-} from "phosphor-react";
 
 const interests: Interest[] = [
 	{
